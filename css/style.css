@@ -478,3 +478,8 @@ option{
 .beleg-container .titel{
     font-size: var(--text-L); font-weight: 500;
 }
+
+.beleg-price{
+    display: flex; flex-direction: row;
+    justify-content: space-between; align-items: center;
+}

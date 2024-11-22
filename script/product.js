@@ -190,7 +190,6 @@ selectMenge.forEach(element => {
         preisProduct.innerHTML = `${newPreis}€`;
 
         if (button && button.classList.contains('entfernen')) {
-            const preisBasis = [];
             preisBasis.length = 0;
             preisBasis.push(parseFloat(newPreis));
         }
@@ -250,6 +249,7 @@ buttonMengeMinus.forEach(element => {
 
 // HINZUFUEGEN   HINZUFUEGEN   HINZUFUEGEN   HINZUFUEGEN   HINZUFUEGEN   HINZUFUEGEN   HINZUFUEGEN   
 
+
 document.addEventListener('click', function (event) {
     const button = event.target;
 
@@ -306,6 +306,7 @@ document.addEventListener('click', function (event) {
 
         button.classList.remove('entfernen');
         preisBasis.length = 0;
+        console.log(preisBasis);
     }
 });
 
