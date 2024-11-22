@@ -18,11 +18,18 @@ function showPrice() {
     console.log(preisBasis);
 
     const basisPrice = document.querySelector('.basis-price');
+    const totalPrice = document.querySelector('.total-price');
 
     if (preisBasis.length > 0) {
         basisPrice.innerHTML = `${preisBasis[0].toFixed(2) + '€'}`;
     } else {
         basisPrice.innerHTML = '0.00€';
+    }
+
+    if (priceTotal > 0) {
+        totalPrice.innerHTML = `${priceTotal[0].toFixed(2) + '€'}`;
+    } else {
+        totalPrice.innerHTML = '0.00€';
     }
 }
 

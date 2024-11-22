@@ -8,6 +8,7 @@ const productListFluessigkeit = document.querySelector('#fluessigkeit .product-l
 const arrayProductList = [arrayBasis, arrayFruechte, arraySuess, arrayNuesse, arraySuperfoods, arrayFluessigkeit];
 
 const preisBasis = [];
+let priceTotal = preisBasis;
 
 
 
