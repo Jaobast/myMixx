@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>MyMixx</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+          crossorigin="anonymous"  referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/var.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/portrait.css">
+    
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="blue"></div>
+
+            <div class="schritt-container">
+                <div class="yellow schritt" id="mixx"> <p>mixx</p></div>
+                <div class="orange schritt" id="bestellen"> <p>bestellen</p></div>
+                <div class="green schritt" id="geniessen"> <p>geniessen</p></div>
+            </div>
+
+            <div id="schritt-mixx" class="hidden schritt-text yellow"><p>Mixx dir deine Lieblingszutaten zusammen!</p></div>
+            <div id="schritt-bestellen" class="hidden schritt-text orange"><p>Bestell und wir machen deinen Mixx fertig!</p></div>
+            <div id="schritt-geniessen" class="hidden schritt-text green"><p> Dann genieße den Geschmack bis zum letzten Löffel!</p></div>
+            
+
+        </nav>
+
+        <div id="logo">
+            <img src="assets/logo.svg" alt="logo MyMixx">
+        </div>
+
+        <div class="overflow-hidden">
+            <div id="video">
+                <video autoplay loop muted playsinline>
+                    <source src="assets/video01.mp4" type="video/mp4" alt="video müsli">
+                </video>
+            </div>
+        </div>
+
+
+    </header>
+
+
+    <main>
+        <div class="product">
+            <button id="basis-bttn" class="chosen">die Basis</button>
+            <button id="fruechte-bttn">Früchte</button>
+            <button id="suess-bttn">Süßungsmittel</button>
+            <button id="nuesse-bttn">Nüsse</button>
+            <button id="superfood-bttn">Superfood</button>
+            <button id="fluessigkeit-bttn">Flüssigkeit</button>
+        </div>
+
+        <div class="product-list-container swiper" id="basis">
+            <h2 class="erklaerung">Wähle zuerst eine Basis für deinen Mix</h2>
+
+                <div class="slider-wrapper">
+                    <div class="product-list swiper-wrapper"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+
+        </div>
+
+        <div class="product-list-container swiper hidden" id="fruechte">
+            <h2 class="erklaerung">Was wenn wir dein Mixx ein bisschen bunt machen?</h2>
+
+                <div class="slider-wrapper">
+                    <div class="product-list swiper-wrapper"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+
+        </div>
+
+        <div class="product-list-container swiper hidden" id="suess">
+            <h2 class="erklaerung">Mach's süß: Such dir ein natürliches Süßungsmittel für deinen Mix!</h2>
+
+                <div class="slider-wrapper">
+                    <div class="product-list swiper-wrapper"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+
+        </div>
+
+        <div class="product-list-container swiper hidden" id="nuesse">
+            <h2 class="erklaerung">Für den extra Crunch: Wähle deine Lieblingsnüsse!</h2>
+
+                <div class="slider-wrapper">
+                    <div class="product-list swiper-wrapper"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+
+        </div>
+
+        <div class="product-list-container swiper hidden" id="superfood">
+            <h2 class="erklaerung">Boost it! Füge Superfoods für extra Power hinzu!</h2>
+
+                <div class="slider-wrapper">
+                    <div class="product-list swiper-wrapper"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+
+        </div>
+
+        <div class="product-list-container swiper hidden" id="fluessigkeit">
+            <h2 class="erklaerung">Letzter Schritt: Such dir eine Flüssigkeit für cremigen Genuss!</h2>
+
+                <div class="slider-wrapper">
+                    <div class="product-list swiper-wrapper"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+
+        </div>
+
+        <div class="bttn-container">
+            <button id="weiter">WEITER</button>
+        </div>
+
+        <div>
+            <div class="cart-container">
+                <button id="cart">MyMixx<i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </main>
+    <div class="beleg-background hidden">
+        <div class="beleg-container">
+            <div class="img-container">
+                <img src="assets/logo-white.svg" alt="">
+            </div>
+            <div class="total-container">
+                <p class="titel">Total:</p>
+            </div>
+            <div class="dash-container">
+                <div class="dash"></div>
+            </div>
+            <div class="auswahl-container">
+                <p class="titel">Basis</p>
+                <p class="titel">Früchte</p>
+                <p class="titel">Süßungsmittel</p>
+                <p class="titel">Nüsse</p>
+                <p class="titel">Superfood</p>
+                <p class="titel">Flüssigkeit</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script/carousel.js"></script>
+
+    <script src="script/script.js"></script>
+    <script src="script/array.js"></script>
+    <script src="script/product.js"></script>
+    <script src="script/cart.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
