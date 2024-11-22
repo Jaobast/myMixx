@@ -58,4 +58,14 @@
     .slider-wrapper{
         margin: 15vh 14vw 55px;
     }
+
+
+    .beleg-container{
+        width: 80vw; height: 70vh;
+        margin-top: 100vh;
+        border-radius: 32px;
+    }
+    .beleg-container .titel{
+        font-size: 15px; font-weight: 500;
+    }
 }
