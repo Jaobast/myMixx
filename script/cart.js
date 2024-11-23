@@ -27,17 +27,4 @@ function showPrice() {
     }
 
     if (priceTotal > 0) {
-        totalPrice.innerHTML = `${priceTotal[0].toFixed(2) + '€'}`;
-    } else {
-        totalPrice.innerHTML = '0.00€';
-    }
-}
-
-btnCart.addEventListener('click', (e) => {
-    belegContainer.classList.remove('hidden');
-    body.classList.add('no-scroll');
-
-    showPrice();
-});
-
-
+        totalPrice.innerHTML = `${priceTotal[0].toFixed(2) + '�
