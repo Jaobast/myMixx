@@ -74,4 +74,18 @@ const arraySuperfoods = [
     { name: 'Weizengraspulver', preis: 1.30 },
     { name: 'Gojipulver', preis: 1.50 },
     { name: 'Kokosflocken', preis: 0.47 },
-    { name: 'Trockene Maulbeere
+    { name: 'Trockene Maulbeeren', preis: 0.73 },
+    { name: 'Agavendicksaft', preis: 0.66 }
+];
+
+const arrayFluessigkeit = [
+    { name: 'Hafermilch', preis: 0.19 },
+    { name: 'Mandelmilch', preis: 0.23 },
+    { name: 'Kokosmilch', preis: 0.23 },
+    { name: 'Sojamilch', preis: 0.18 },
+    { name: 'Reismilch', preis: 0.19 },
+    { name: 'Vollmilch', preis: 0.16 },
+    { name: 'Joghurt', info: '(natur| griechisch)', preis: 0.38 },
+    { name: 'Wasser', info: '(sehr weich und mikrofiltriert)', preis: 0.19 },
+    { name: 'Kokoswasser', preis: 0.21 }
+];
