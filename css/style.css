@@ -482,4 +482,6 @@ option{
 }
 
 .beleg-price{
-    display: flex; flex-di
+    display: flex; flex-direction: row;
+    justify-content: space-between; align-items: center;
+}

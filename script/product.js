@@ -307,4 +307,9 @@ document.addEventListener('click', function (event) {
 
         button.classList.remove('entfernen');
         preisBasis.length = 0;
-        console.l
+        console.log(preisBasis);
+    }
+});
+
+
+
