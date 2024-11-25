@@ -20,16 +20,17 @@
     }
 
     .overflow-hidden{
-        width: 100vw;
+        width: 130vw;
         overflow: hidden;
         position: absolute;
+        left: 100%; transform: translateX(-12%);
         bottom: 2vh; left: 0;
         display: flex;
         justify-content: center;
     }
 
     #video {
-        width: 120%;
+        width: 100%;
     }
 
     .product{
