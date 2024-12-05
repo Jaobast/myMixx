@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/var.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/portrait.css">
+    <link rel="stylesheet" href="css/formular.css">
     
 </head>
 <body>
@@ -42,7 +43,6 @@
             <div id="video">
                 <video autoplay loop muted playsinline>
                     <source src="assets/video01.mp4" type="video/mp4" alt="video müsli">
-                    <img src="assets/01.basis/" alt="">
                 </video>
             </div>
         </div>
@@ -51,7 +51,7 @@
     </header>
 
 
-    <main>
+    <main id="main" class="hidden">
         <div class="product">
             <button id="basis-bttn" class="chosen">die Basis</button>
             <button id="fruechte-bttn">Früchte</button>
@@ -151,7 +151,7 @@
     </main>
 
 
-    <div class="beleg-background hidden">
+    <div class="beleg-background">
         
         <div class="beleg-container">
             <div class="img-container">
@@ -168,31 +168,174 @@
             </div>
             <div class="auswahl-container">
                 <div class="beleg-price">
-                    <p class="titel">Basis</p>
-                    <p class="basis-price"></p>
+                    <p class="titel">Basis*</p>
+
+                    <div class="price-container">
+                        <p class="basis-price">1.50€</p>
+                        <p class="delete"><i class="fa-regular fa-circle-xmark"></i></p>
+                    </div>
                 </div>
-                <p class="titel">Früchte</p>
-                <p class="titel">Süßungsmittel</p>
-                <p class="titel">Nüsse</p>
-                <p class="titel">Superfood</p>
-                <p class="titel">Flüssigkeit</p>
+
+                <div class="beleg-price">
+                    <p class="titel">Früchte</p>
+                    <p class="fruechte-price"></p>
+                </div>
+
+                <div class="beleg-price">
+                    <p class="titel">Süßungsmittel</p>
+                    <p class="suess-price"></p>
+                </div>
+
+                <div class="beleg-price">
+                    <p class="titel">Nüsse</p>
+                    <p class="nuesse-price"></p>
+                </div>
+
+                <div class="beleg-price">
+                    <p class="titel">Superfood</p>
+                    <p class="superfood-price"></p>
+                </div>
+
+                <div class="beleg-price">
+                    <p class="titel">Flüssigkeit*</p>
+                    <p class="fluessigkeit-price"></p>
+                </div>
+
+
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script/carousel.js"></script>
+
+
+    <div class="formular-background hidden">
+
+
+        <div class="formular-beleg-container">
+            <div class="formular-beleg relative">
+
+
+
+
+                <div class="img">
+                    <img src="assets/logo.svg" alt="">
+                </div>
+
+                <div class="total-container">
+                    <div class="beleg-price-formular">
+                        <p class="titel">Total:</p>
+                        <p class="total-price-formular"></p>
+                    </div>
+                </div>
+                <div class="dash-container">
+                    <div class="dash"></div>
+                </div>
+
+                <div class="auswahl-container">
+                    <div class="beleg-price-formular">
+                        <p class="titel">Basis*</p>
+
+
+                        <p class="basis-price-formular"></p>
+                    </div>
+    
+                    <div class="beleg-price-formular">
+                        <p class="titel">Früchte</p>
+                        <p class="fruechte-price-formular"></p>
+                    </div>
+    
+                    <div class="beleg-price-formular">
+                        <p class="titel">Süßungsmittel</p>
+                        <p class="suess-price-formular"></p>
+                    </div>
+    
+                    <div class="beleg-price-formular">
+                        <p class="titel">Nüsse</p>
+                        <p class="nuesse-price-formular"></p>
+                    </div>
+    
+                    <div class="beleg-price-formular">
+                        <p class="titel">Superfood</p>
+                        <p class="superfood-price-formular"></p>
+                    </div>
+    
+                    <div class="beleg-price-formular">
+                        <p class="titel">Flüssigkeit*</p>
+                        <p class="fluessigkeit-price-formular"></p>
+                    </div>
+    
+    
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+        <div class="formular-container">
+
+            <h1>Deine persönlichen Daten</h1>
+            <form>
+                <div class="label-input">
+                    <label for="name-formular">Vor- und Nachname</label>
+                    <input type="text" id="name-formular">
+                </div>
+
+
+
+                <div class="label-input relative">
+                    <label for="mail">E-Mail</label>
+                    <input type="email" id="mail">
+                    <p class="hinweis">gültige E-Mail erforderlich</p>
+                </div>
+
+
+
+                <div class="label-input">
+                    <label for="tel">Telefonnummer</label>
+                    <input type="tel" id="tel">
+                </div>
+
+
+
+                <div class="label-input">
+                    <label for="filiale">Wunsch Filiale für Abholung</label>
+                    <input type="email" id="filiale">
+                </div>
+
+
+                <div class="abhol-container">
+                    <div class="label-input">
+                        <label for="day">Abholungstag</label>
+                        <input type="date" id="day">
+                    </div>
+
+                    <div class="label-input">
+                        <label for="hour">Uhrzeit</label>
+                        <input type="time" id="hour">
+                    </div>
+                </div>
+
+
+                
+            </form>
+
+        </div>
+    </div>
+
+
 
     <script src="script/script.js"></script>
     <script src="script/array.js"></script>
     <script src="script/product.js"></script>
+    <script src="script/hinzufuegen.js"></script>
     <script src="script/cart.js"></script>
+    <script src="script/bestellen.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script/carousel.js"></script>
+
 </body>
 </html>
-
-
-
-
-
-
-

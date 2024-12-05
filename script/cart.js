@@ -15,19 +15,44 @@ document.addEventListener('click', (e) => {
 
 
 function showPrice() {
-    console.log(preisBasis);
 
-    const basisPrice = document.querySelector('.basis-price');
+    const basisPriceText = document.querySelector('.basis-price');
+    const fruechtePriceText = document.querySelector('.fruechte-price');
+    const suessPriceText = document.querySelector('.suess-price');
+    const nuessePriceText = document.querySelector('.nuesse-price');
+    const superfoodsPriceText = document.querySelector('.superfood-price');
+    const fluessigkeitPriceText = document.querySelector('.fluessigkeit-price');
+
+    const arrayPriceText = [fruechtePriceText, suessPriceText, nuessePriceText, superfoodsPriceText];
+    const arrayPrice = [preisFruechteTotal, preisSuessTotal, preisNuesseTotal, preisSuperfoodsTotal];
+
     const totalPrice = document.querySelector('.total-price');
 
-    if (preisBasis.length > 0) {
-        basisPrice.innerHTML = `${preisBasis[0].toFixed(2) + '€'}`;
+    if (preisBasis > 0) {
+        basisPriceText.innerHTML = `${preisBasis.toFixed(2) + '€'}`;
     } else {
-        basisPrice.innerHTML = '0.00€';
+        basisPriceText.innerHTML = '';
     }
 
-    if (priceTotal > 0) {
-        totalPrice.innerHTML = `${priceTotal[0].toFixed(2) + '€'}`;
+    if (preisFluessigkeit > 0) {
+        fluessigkeitPriceText.innerHTML = `${preisFluessigkeit.toFixed(2) + '€'}`;
+    } else {
+        fluessigkeitPriceText.innerHTML = '';
+    }
+
+
+    for (let i = 0; i < arrayPrice.length; i++) {
+        if (arrayPrice[i] > 0) {
+            arrayPriceText[i].innerHTML = `${arrayPrice[i].toFixed(2)}€`;
+        } else {
+            arrayPriceText[i].innerHTML = '';
+        }
+    }
+
+
+
+    if (!isNaN(preisTotal) && preisTotal > 0) {
+        totalPrice.innerHTML = `${preisTotal.toFixed(2)}€`;
     } else {
         totalPrice.innerHTML = '0.00€';
     }
@@ -39,5 +64,3 @@ btnCart.addEventListener('click', (e) => {
 
     showPrice();
 });
-
-

@@ -37,13 +37,8 @@ let nummer = 0;
 
 
 
-
 for (let i = 0; i < arrayBttn.length; i++) {
     arrayBttn[i].addEventListener('click', () => {
-        console.log("clicado");
-        
-
-
         for (let j = 0; j < arrayContainer.length; j++) {
             if (arrayContainer[j]) {
                 arrayContainer[j].classList.add("hidden");
@@ -56,16 +51,20 @@ for (let i = 0; i < arrayBttn.length; i++) {
         arrayContainer[i].classList.remove("hidden");
         arrayBttn[i].classList.add("chosen");
 
-        if (nummer === arrayBttn.length - 1) {
-            weiterBttn.textContent = "bestellen";
-        } else { weiterBttn.textContent = "weiter";}
-        
+        // Verifica se o último botão foi escolhido
+        if (arrayBttn[arrayBttn.length - 1].classList.contains("chosen")) {
+            weiterBttn.textContent = "BESTELLEN";
+        } else {
+            weiterBttn.textContent = "WEITER";
+        }
     });
 }
 
 weiterBttn.addEventListener('click', () => {
 
+
     if (nummer < arrayBttn.length - 1) {
+        nummer++;
 
         for (let i = 0; i < arrayContainer.length; i++) {
             arrayContainer[i].classList.add("hidden");
@@ -75,12 +74,17 @@ weiterBttn.addEventListener('click', () => {
         arrayContainer[nummer].classList.remove("hidden");
         arrayBttn[nummer].classList.add("chosen");
 
-        if (nummer === arrayBttn.length - 1) {
-            weiterBttn.textContent = "bestellen";
-        } else { weiterBttn.textContent = "weiter";}
+        // Verifica se o último botão foi escolhido
+        if (arrayBttn[arrayBttn.length - 1].classList.contains("chosen")) {
+            weiterBttn.textContent = "BESTELLEN";
+        } else {
+            weiterBttn.textContent = "WEITER";
+        }
     }
-
 });
+
+
+
 
 
 //NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV   NAV 

@@ -7,9 +7,6 @@ const productListFluessigkeit = document.querySelector('#fluessigkeit .product-l
 
 const arrayProductList = [arrayBasis, arrayFruechte, arraySuess, arrayNuesse, arraySuperfoods, arrayFluessigkeit];
 
-const preisBasis = [];
-let priceTotal = preisBasis;
-
 
 
 
@@ -51,7 +48,7 @@ arrayFruechte.forEach(product => {
             <p class="product-name">${product.name}</p>
             ${product.info ? `<p class="product-name-detail">${product.info}</p>` : ''}
             <div class="product-info">
-
+                <img src = "${product.pic}">
                 <div class="preis-container">
                    <p class='menge'>20g</p>
                    <p class='preis' data-preis="${product.preis}">${product.preis.toFixed(2)}€</p>
@@ -74,7 +71,7 @@ arraySuess.forEach(product => {
             <p class="product-name">${product.name}</p>
             ${product.info ? `<p class="product-name-detail">${product.info}</p>` : ''}
             <div class="product-info">
-            
+                <img src = "${product.pic}">
                 <div class="preis-container">
                    <p class='menge'>20g</p>
                    <p class='preis' data-preis="${product.preis}">${product.preis.toFixed(2)}€</p>
@@ -97,7 +94,7 @@ arrayNuesse.forEach(product => {
             <p class="product-name">${product.name}</p>
             ${product.info ? `<p class="product-name-detail">${product.info}</p>` : ''}
             <div class="product-info">
-
+                <img src = "${product.pic}">
                 <div class="preis-container">
                    <p class='menge'>20g</p>
                    <p class='preis' data-preis="${product.preis}">${product.preis.toFixed(2)}€</p>
@@ -120,7 +117,7 @@ arraySuperfoods.forEach(product => {
             <p class="product-name">${product.name}</p>
             ${product.info ? `<p class="product-name-detail">${product.info}</p>` : ''}
             <div class="product-info">
-
+                <img src = "${product.pic}">
                 <div class="preis-container">
                    <p class='menge'>20g</p>
                    <p class='preis' data-preis="${product.preis}">${product.preis.toFixed(2)}€</p>
@@ -143,17 +140,21 @@ arrayFluessigkeit.forEach(product => {
             <p class="product-name">${product.name}</p>
             ${product.info ? `<p class="product-name-detail">${product.info}</p>` : ''}
             <div class="product-info">
-
+                <img src = "${product.pic}">
                 <div class="preis-container">
                    <p class='menge'>20g</p>
                    <p class='preis' data-preis="${product.preis}">${product.preis.toFixed(2)}€</p>
                 </div>
 
-                <div class="anzahl">
-                   <button class="minus">-</button>
-                   <p class="nummer">1 Portion</p>
-                   <button class="plus">+</button>
+                    <div class="select-container">
+                       <select class="select-menge">
+                          <option value = "klein">klein</option>
+                          <option value = "medium">medium</option>
+                          <option value = "groß">groß</option>
+                    </select>
+                    <div class="icon-container">   <i class="fa-solid fa-chevron-down"></i>   </div>
                 </div>
+
                 <button class="hinzufuegen">hinzufügen</button>
             </div>
         </div>
@@ -165,6 +166,7 @@ arrayFluessigkeit.forEach(product => {
 // SELECT   SELECT   SELECT   SELECT   SELECT   SELECT   SELECT   SELECT  
 
 const selectMenge = document.querySelectorAll('.select-menge');
+
 
 selectMenge.forEach(element => {
     element.addEventListener('change', (e) => {
@@ -190,9 +192,19 @@ selectMenge.forEach(element => {
 
         preisProduct.innerHTML = `${newPreis}€`;
 
+
         if (button && button.classList.contains('entfernen')) {
-            preisBasis.length = 0;
-            preisBasis.push(parseFloat(newPreis));
+            const productContainer = element.closest('.product-container');
+        
+            if (productContainer.closest('#basis')) {
+                preisBasis = parseFloat(newPreis);
+            } else if (productContainer.closest('#fluessigkeit')) {
+                preisFluessigkeit = parseFloat(newPreis);
+                console.log('mudou');
+                
+            }
+            
+            updateTotal();
         }
     });
 });
@@ -246,70 +258,3 @@ buttonMengeMinus.forEach(element => {
         }
     });
 });
-
-
-// HINZUFUEGEN   HINZUFUEGEN   HINZUFUEGEN   HINZUFUEGEN   HINZUFUEGEN   HINZUFUEGEN   HINZUFUEGEN   
-
-
-document.addEventListener('click', function (event) {
-    const button = event.target;
-
-    if (!button.classList.contains('hinzufuegen') && !button.classList.contains('entfernen')) {
-        return;
-    }
-
-    const basisDiv = document.querySelector('#basis');
-    const allButtons = basisDiv.querySelectorAll('button');
-
-    if (button.classList.contains('hinzufuegen')) {
-        preisBasis.length = 0;
-
-        allButtons.forEach((btn) => {
-            if (btn.classList.contains('entfernen')) {
-                btn.classList.add('hinzufuegen');
-                btn.innerHTML = 'hinzufügen';
-
-                const productContainer = btn.closest('.product-container');
-                if (productContainer) {
-                    productContainer.classList.remove('entfernen-container');
-                }
-
-                btn.classList.remove('entfernen');
-            }
-        });
-
-        button.classList.add('entfernen');
-        button.innerHTML = 'entfernen';
-
-        const productContainer = button.closest('.product-container');
-        if (productContainer) {
-            productContainer.classList.add('entfernen-container');
-        }
-
-        button.classList.remove('hinzufuegen');
-
-        const preisProduct = button.closest('.product-info')?.querySelector('.preis');
-        if (preisProduct) {
-            const preisText = preisProduct.textContent.trim();
-            const preisNumber = parseFloat(preisText.replace('€', '').replace(',', '.'));
-            if (!isNaN(preisNumber)) {
-                preisBasis.push(preisNumber);
-            }
-        }
-    } else if (button.classList.contains('entfernen')) {
-        button.classList.add('hinzufuegen');
-        button.innerHTML = 'hinzufügen';
-
-        const productContainer = button.closest('.product-container');
-        if (productContainer) {
-            productContainer.classList.remove('entfernen-container');
-        }
-
-        button.classList.remove('entfernen');
-        preisBasis.length = 0;
-        console.log(preisBasis);
-    }
-});
-
-
-

@@ -329,12 +329,6 @@ main{
     }
 
     & .plus:hover{ background-color: white;}
-
-    /* & .product-info img{
-        width: calc(70% + 6px);
-        padding: 3px;
-        border: 1px black solid;
-    } */
 }
 
 .preis{
@@ -418,7 +412,7 @@ option{
 
 
     width: 100vw; height: 200vh;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.85);
     z-index: 100;
     top: 0; left: 0;
     cursor: pointer;
