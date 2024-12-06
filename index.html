@@ -51,7 +51,7 @@
     </header>
 
 
-    <main id="main" class="hidden">
+    <main id="main" class="">
         <div class="product">
             <button id="basis-bttn" class="chosen">die Basis</button>
             <button id="fruechte-bttn">Früchte</button>
@@ -151,7 +151,7 @@
     </main>
 
 
-    <div class="beleg-background">
+    <div class="beleg-background hidden">
         
         <div class="beleg-container">
             <div class="img-container">
@@ -170,35 +170,66 @@
                 <div class="beleg-price">
                     <p class="titel">Basis*</p>
 
-                    <div class="price-container">
-                        <p class="basis-price">1.50€</p>
-                        <p class="delete"><i class="fa-regular fa-circle-xmark"></i></p>
+                    <div class="price-container price-container1 hidden">
+                        <p class="basis-name"></p>
+                        <p class="basis-price"></p>
+                        <button class="delete"><i class="fa-regular fa-circle-xmark"></i></button>
                     </div>
                 </div>
 
                 <div class="beleg-price">
                     <p class="titel">Früchte</p>
-                    <p class="fruechte-price"></p>
+
+                    <div class="price-container price-container2">
+                        <p class="fruechte-name">teste</p>
+                        <p class="fruechte-price">teste</p>
+                        <button class="delete"><i class="fa-regular fa-circle-xmark"></i></button>
+                    </div>
+
                 </div>
 
                 <div class="beleg-price">
                     <p class="titel">Süßungsmittel</p>
-                    <p class="suess-price"></p>
+
+                    <div class="price-container price-container3 hidden">
+                        <p class="suess-name"></p>
+                        <p class="suess-price"></p>
+                        <button class="delete"><i class="fa-regular fa-circle-xmark"></i></button>
+                    </div>
+
                 </div>
 
                 <div class="beleg-price">
                     <p class="titel">Nüsse</p>
-                    <p class="nuesse-price"></p>
+
+                    <div class="price-container price-container4 hidden">
+                        <p class="nuesse-name"></p>
+                        <p class="nuesse-price"></p>
+                        <button class="delete"><i class="fa-regular fa-circle-xmark"></i></button>
+                    </div>
+
                 </div>
 
                 <div class="beleg-price">
                     <p class="titel">Superfood</p>
-                    <p class="superfood-price"></p>
+
+                    <div class="price-container price-container5 hidden">
+                        <p class="superfood-name"></p>
+                        <p class="superfood-price"></p>
+                        <button class="delete"><i class="fa-regular fa-circle-xmark"></i></button>
+                    </div>
+
                 </div>
 
                 <div class="beleg-price">
                     <p class="titel">Flüssigkeit*</p>
-                    <p class="fluessigkeit-price"></p>
+
+                    <div class="price-container price-container6 hidden">
+                        <p class="fluessigkeit-name"></p>
+                        <p class="fluessigkeit-price"></p>
+                        <button class="delete"><i class="fa-regular fa-circle-xmark"></i></button>
+                    </div>
+
                 </div>
 
 
@@ -330,6 +361,14 @@
     <script src="script/array.js"></script>
     <script src="script/product.js"></script>
     <script src="script/hinzufuegen.js"></script>
+
+    <script src="script/01basis.js"></script>
+    <script src="script/02fruechte.js"></script>
+    <script src="script/03suess.js"></script>
+    <script src="script/04nuesse.js"></script>
+    <script src="script/05superfood.js"></script>
+    <script src="script/06fluessigkeit.js"></script>
+
     <script src="script/cart.js"></script>
     <script src="script/bestellen.js"></script>
 
