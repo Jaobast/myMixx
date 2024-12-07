@@ -1,21 +1,3 @@
-let nameFruechte = [];
-let preisFruechte = [];
-
-const priceContainer2 = document.querySelector('.price-container2');
-
-const fruechteList = {
-    containerId: '#fruechte',
-    nameArray: nameFruechte,
-    preisArray: preisFruechte,
-    priceContainer: priceContainer2,
-    fase: 'fruechte'
-};
-
-const bttnFruechte = productListFruechte.querySelectorAll('.hinzufuegen');
-bttnFruechte.forEach(button => {
-    button.addEventListener('click', (event) => addAndRemove(event, fruechteList));
-});
-
 function addAndRemove(event, faseList) {
     const button = event.target;
 
