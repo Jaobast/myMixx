@@ -20,7 +20,7 @@
     }
 
     .overflow-hidden{
-        width: 130vw;
+        width: 100%;
         overflow: hidden;
         position: absolute;
         left: 100%; transform: translateX(-12%);
@@ -30,7 +30,7 @@
     }
 
     #video {
-        width: 100%;
+        width: 150%;
     }
 
     .product{

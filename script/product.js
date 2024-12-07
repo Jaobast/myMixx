@@ -213,10 +213,39 @@ selectMenge.forEach(element => {
 
 // MENGE   MENGE   MENGE   MENGE   MENGE  MENGE   MENGE   MENGE   MENGE   MENGE  
 
-const buttonMengePlus = document.querySelectorAll('.plus');
-const buttonMengeMinus = document.querySelectorAll('.minus');
 
-buttonMengePlus.forEach(element => {
+function buttonPlus(element, preisArray, nameArray) {
+    const mengeProduct = element.closest('.product-info').querySelector('.menge');
+    const preisProduct = element.closest('.product-info').querySelector('.preis');
+    const nameProduct = element.closest('.product-container').querySelector('.product-name').innerHTML.trim();
+
+
+    const preisPortion = parseFloat(preisProduct.dataset.preis).toFixed(2);
+    const mengePortion = 20;
+
+    const anzahlContainer = element.closest('.anzahl');
+    const anzahlPortion = anzahlContainer.querySelector('.nummer');
+    let anzahl = parseInt(anzahlPortion.textContent) || 1;
+    
+    if (anzahl < 3) {
+        anzahl++;
+        anzahlPortion.textContent = `${anzahl} Portion${anzahl > 1 ? 'en' : ''}`;
+        preisProduct.innerHTML = `${(preisPortion * anzahl).toFixed(2) + '€'}`;
+        mengeProduct.innerHTML = `${(mengePortion * anzahl) + 'g'}`;
+    }
+
+    console.log('Produtos:', nameArray);
+    console.log('Preços:', preisArray);
+
+}
+
+
+
+
+
+
+
+/* buttonMengePlus.forEach(element => {
     element.addEventListener('click', () => {
         const mengeProduct = element.closest('.product-info').querySelector('.menge');
         const preisProduct = element.closest('.product-info').querySelector('.preis');
@@ -235,13 +264,14 @@ buttonMengePlus.forEach(element => {
             preisProduct.innerHTML = `${(preisPortion * anzahl).toFixed(2) + '€'}`;
             mengeProduct.innerHTML = `${(mengePortion * anzahl) + 'g'}`;
         }
+        updateTotal()
     });
-});
+}); */
 
 buttonMengeMinus.forEach(element => {
     element.addEventListener('click', () => {
         const mengeProduct = element.closest('.product-info').querySelector('.menge');
-        const preisProduct = element.closest('.product-info').querySelector('.preis');
+        const preisProduct = element.closest('.product-info').querySelector('.product-name');
 
         const preisPortion = parseFloat(preisProduct.dataset.preis).toFixed(2);
         const mengePortion = 20;
@@ -256,5 +286,6 @@ buttonMengeMinus.forEach(element => {
             preisProduct.innerHTML = `${(preisPortion * anzahl).toFixed(2) + '€'}`;
             mengeProduct.innerHTML = `${(mengePortion * anzahl) + 'g'}`;
         }
+        updateTotal()
     });
 });

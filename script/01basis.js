@@ -1,3 +1,11 @@
+const priceContainer1 = document.querySelector('.price-container1');
+
+let preisBasis = 0;
+let nameBasis = '';
+
+const nameBasisText = document.querySelector('.basis-name');
+
+
 productListBasis.addEventListener('click', function (event) {
     const button = event.target;
 
@@ -50,8 +58,6 @@ productListBasis.addEventListener('click', function (event) {
                 const nameProduct = button.closest('.product-container')?.querySelector('.product-name');
                 if (nameProduct) {
                     nameBasis = nameProduct.textContent.trim();
-                    console.log(nameBasis);
-                    const nameBasisText = document.querySelector('.basis-name');
                     nameBasisText.innerHTML = nameBasis;
                 }
             }
@@ -73,3 +79,30 @@ productListBasis.addEventListener('click', function (event) {
 
     updateTotal();
 });
+
+
+const deleteBasis = priceContainer1.querySelector('.delete');
+
+deleteBasis.addEventListener('click', () =>{
+    priceContainer1.classList.add('hidden');
+    preisBasis = 0;
+    updateTotal();
+
+    const productContainerDivs = document.querySelectorAll('.product-container');
+
+    productContainerDivs.forEach(container => {
+        const productNameElement = container.querySelector('.product-name');
+        const bttn = container.querySelector('button');
+    
+        if (productNameElement && productNameElement.innerHTML.trim() === nameBasis) {
+            container.classList.remove('entfernen-container');
+
+            bttn.classList.remove('entfernen');
+            bttn.classList.add('hinzufuegen');
+            bttn.innerHTML = 'hinzufügen';
+
+        }
+    });
+
+})
+

@@ -38,8 +38,8 @@ const arrayFruechte = [
 
 //20g  30ml
 const arraySuess = [
-    { name: 'Schokoladenstücke', info: '(Dunkel)', preis: 0.51, pic:'assets/03.suess/01.png'},
-    { name: 'Schokoladenstücke', info: '(Weiß)', preis: 0.51, pic:'assets/03.suess/02.png'},
+    { name: 'Dunkelschokoladen', info: '(Stücke)', preis: 0.52, pic:'assets/03.suess/01.png'},
+    { name: 'Weißschokoladen', info: '(Stücke)', preis: 0.51, pic:'assets/03.suess/02.png'},
     { name: 'Karamellstücke', preis: 0.53, pic:'assets/03.suess/03.png'},
     { name: 'Kokoschips', preis: 0.47, pic:'assets/03.suess/04.png'},
     { name: 'Honig', preis: 0.72 },

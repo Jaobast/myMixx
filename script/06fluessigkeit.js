@@ -1,3 +1,7 @@
+const priceContainer6 = document.querySelector('.price-container6');
+let preisFluessigkeit = 0;
+let nameFluessigkeit = '';
+
 productListFluessigkeit.addEventListener('click', function (event) {
     const button = event.target;
 
@@ -71,3 +75,28 @@ productListFluessigkeit.addEventListener('click', function (event) {
 
     updateTotal();
 });
+
+
+const deleteFluessigkeit = priceContainer6.querySelector('.delete');
+
+deleteFluessigkeit.addEventListener('click', () =>{
+    priceContainer6.classList.add('hidden');
+    preisFluessigkeit = 0;
+    updateTotal();
+
+    const productContainerDivs = document.querySelectorAll('.product-container');
+
+    productContainerDivs.forEach(container => {
+        const productNameElement = container.querySelector('.product-name');
+        const bttn = container.querySelector('button');
+    
+        if (productNameElement && productNameElement.innerHTML.trim() === nameFluessigkeit) {
+            container.classList.remove('entfernen-container');
+
+            bttn.classList.remove('entfernen');
+            bttn.classList.add('hinzufuegen');
+            bttn.innerHTML = 'hinzufügen';
+
+        }
+    });
+})

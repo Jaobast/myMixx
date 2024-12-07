@@ -1,0 +1,4 @@
+    /* preisFruechteTotal = preisFruechte.reduce((total, price) => total + price, 0);
+    preisSuessTotal = preisSuess.reduce((total, price) => total + price, 0);
+    preisNuesseTotal = preisNuesse.reduce((total, price) => total + price, 0);
+    preisSuperfoodsTotal = preisSuperfoods.reduce((total, price) => total + price, 0); */
