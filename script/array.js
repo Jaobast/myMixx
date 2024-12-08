@@ -42,9 +42,9 @@ const arraySuess = [
     { name: 'Weißschokoladen', info: '(Stücke)', preis: 0.51, pic:'assets/03.suess/02.png'},
     { name: 'Karamellstücke', preis: 0.53, pic:'assets/03.suess/03.png'},
     { name: 'Kokoschips', preis: 0.47, pic:'assets/03.suess/04.png'},
-    { name: 'Honig', preis: 0.72 },
-    { name: 'Ahornsirup', preis: 0.96 },
-    { name: 'Agavendicksaft', preis: 0.54 },
+    { name: 'Honig', preis: 0.72, pic:'assets/03.suess/05.png' },
+    { name: 'Ahornsirup', preis: 0.96, pic:'assets/03.suess/06.png' },
+    { name: 'Agavendicksaft', preis: 0.54, pic:'assets/03.suess/07.png' },
 ];
 
 const arrayNuesse = [
@@ -68,13 +68,13 @@ const arraySuperfoods = [
     { name: 'Matcha-Pulver', preis: 4.80, pic:'assets/05.superfood/02.png' },
     { name: 'Maca-Pulver', preis: 1.10, pic:'assets/05.superfood/03.png' },
     { name: 'Baobab-Pulver', preis: 1.20, pic:'assets/05.superfood/04.png' },
-    { name: 'Spirulina', preis: 2.80 },
-    { name: 'Acai-Beeren', preis: 1.70 },
-    { name: 'Lucuma-Pulver', preis: 1.00 },
-    { name: 'Weizengraspulver', preis: 1.30 },
-    { name: 'Gojipulver', preis: 1.50 },
-    { name: 'Kokosflocken', preis: 0.47 },
-    { name: 'Trockene Maulbeeren', preis: 0.73 },
+    { name: 'Spirulina', preis: 2.80, pic:'assets/05.superfood/05.png' },
+    { name: 'Acai-Beeren', preis: 1.70, pic:'assets/05.superfood/06.png' },
+    { name: 'Lucuma-Pulver', preis: 1.00, pic:'assets/05.superfood/07.png' },
+    { name: 'Weizengraspulver', preis: 1.30, pic:'assets/05.superfood/08.png' },
+    { name: 'Gojipulver', preis: 1.50, pic:'assets/05.superfood/09.png' },
+    { name: 'Kokosflocken', preis: 0.47, pic:'assets/05.superfood/10.png' },
+    { name: 'Trockene Maulbeeren', preis: 0.73, pic:'assets/05.superfood/11.png' },
     { name: 'Agavendicksaft', preis: 0.66 }
 ];
 
@@ -83,9 +83,9 @@ const arrayFluessigkeit = [
     { name: 'Mandelmilch', preis: 0.23, pic:'assets/06.fluessigkeit/02.png' },
     { name: 'Kokosmilch', preis: 0.23, pic:'assets/06.fluessigkeit/03.png' },
     { name: 'Sojamilch', preis: 0.18, pic:'assets/06.fluessigkeit/04.png' },
-    { name: 'Reismilch', preis: 0.19 },
-    { name: 'Vollmilch', preis: 0.16 },
-    { name: 'Joghurt', info: '(natur| griechisch)', preis: 0.38 },
-    { name: 'Wasser', info: '(sehr weich und mikrofiltriert)', preis: 0.19 },
-    { name: 'Kokoswasser', preis: 0.21 }
+    { name: 'Reismilch', preis: 0.19, pic:'assets/06.fluessigkeit/05.png' },
+    { name: 'Vollmilch', preis: 0.16, pic:'assets/06.fluessigkeit/06.png'},
+    { name: 'Joghurt', info: '(natur| griechisch)', preis: 0.38, pic:'assets/06.fluessigkeit/07.png' },
+    { name: 'Wasser', info: '(sehr weich und mikrofiltriert)', preis: 0.19, pic:'assets/06.fluessigkeit/08.png' },
+    { name: 'Kokoswasser', preis: 0.21, pic:'assets/06.fluessigkeit/09.png' }
 ];

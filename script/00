@@ -1,4 +1,22 @@
-    /* preisFruechteTotal = preisFruechte.reduce((total, price) => total + price, 0);
-    preisSuessTotal = preisSuess.reduce((total, price) => total + price, 0);
-    preisNuesseTotal = preisNuesse.reduce((total, price) => total + price, 0);
-    preisSuperfoodsTotal = preisSuperfoods.reduce((total, price) => total + price, 0); */
+weiterBttn.addEventListener('click', () => {
+
+
+    if (nummer < arrayBttn.length - 1) {
+        nummer++;
+        
+
+        for (let i = 0; i < arrayContainer.length; i++) {
+            arrayContainer[i].classList.add("hidden");
+            arrayBttn[i].classList.remove("chosen");
+        }
+
+        arrayContainer[nummer].classList.remove("hidden");
+        arrayBttn[nummer].classList.add("chosen");
+
+        if (arrayBttn[arrayBttn.length - 1].classList.contains("chosen")) {
+            weiterBttn.textContent = "BESTELLEN";
+        } else {
+            weiterBttn.textContent = "WEITER";
+        }
+    }
+});

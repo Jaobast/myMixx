@@ -32,7 +32,19 @@ const arraySchritt = [mixxSchritt, bestellenSchritt, geniessenSchritt];
 const logo = document.querySelector("#logo img");
 
 
+const main = document.getElementById('main');
+const formularContain = document.querySelector('.formular-background');
+
+const basisFormular = document.querySelector('.basis-price-formular');
+const fruechteFormular = document.querySelector('.fruechte-price-formular');
+const suessFormular = document.querySelector('.suess-price-formular');
+const nuesseFormular = document.querySelector('.nuesse-price-formular');
+const superfoodFormular = document.querySelector('.superfood-price-formular');
+const fluessigkeitFormular = document.querySelector('.fluessigkeit-price-formular');
+
+
 let nummer = 0;
+let valueNummer = 0;
 
 
 
@@ -51,7 +63,10 @@ for (let i = 0; i < arrayBttn.length; i++) {
         arrayContainer[i].classList.remove("hidden");
         arrayBttn[i].classList.add("chosen");
 
-        // Verifica se o último botão foi escolhido
+        valueNummer = arrayBttn[i].value;
+        console.log(valueNummer);
+        
+
         if (arrayBttn[arrayBttn.length - 1].classList.contains("chosen")) {
             weiterBttn.textContent = "BESTELLEN";
         } else {
@@ -61,27 +76,25 @@ for (let i = 0; i < arrayBttn.length; i++) {
 }
 
 weiterBttn.addEventListener('click', () => {
-
-
-    if (nummer < arrayBttn.length - 1) {
-        nummer++;
-
+    if (valueNummer <= arrayContainer.length) {
+        valueNummer++;
+        
         for (let i = 0; i < arrayContainer.length; i++) {
             arrayContainer[i].classList.add("hidden");
             arrayBttn[i].classList.remove("chosen");
         }
+        
+        arrayContainer[valueNummer].classList.remove("hidden");
+        arrayBttn[valueNummer].classList.add("chosen");
 
-        arrayContainer[nummer].classList.remove("hidden");
-        arrayBttn[nummer].classList.add("chosen");
-
-        // Verifica se o último botão foi escolhido
-        if (arrayBttn[arrayBttn.length - 1].classList.contains("chosen")) {
+        if (valueNummer === arrayContainer.length - 1) {
             weiterBttn.textContent = "BESTELLEN";
         } else {
             weiterBttn.textContent = "WEITER";
         }
     }
 });
+
 
 
 
