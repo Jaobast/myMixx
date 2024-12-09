@@ -23,7 +23,7 @@ arrayBasis.forEach(product => {
             <div class="product-info">
                 <img src = "${product.pic}">
                 <div class="preis-container">
-                   <p class='menge'>100g</p>
+                   <p class='menge'>${product.amount}g</p>
                    <p class='preis' data-preis="${product.preis}">${product.preis.toFixed(2)}€</p>
                 </div>
 
@@ -142,7 +142,7 @@ arrayFluessigkeit.forEach(product => {
             <div class="product-info">
                 <img src = "${product.pic}">
                 <div class="preis-container">
-                   <p class='menge'>20g</p>
+                   <p class='menge'>${product.amount}${product.unit}</p>
                    <p class='preis' data-preis="${product.preis}">${product.preis.toFixed(2)}€</p>
                 </div>
 
@@ -168,72 +168,62 @@ arrayFluessigkeit.forEach(product => {
 const selectMenge = document.querySelectorAll('.select-menge');
 
 
+
 selectMenge.forEach(element => {
+    let numberAmount = 1;
+
     element.addEventListener('change', (e) => {
-        const mengeProduct = element.closest('.product-info').querySelector('.menge');
+        
+        const amountText = element.closest('.product-info').querySelector('.menge');
+        let amount = parseInt(amountText.textContent);
+
+
+        amount = amount/numberAmount;
+        
+
+
         const preisProduct = element.closest('.product-info').querySelector('.preis');
         const button = element.closest('.product-info').querySelector('button.entfernen');
-        const preisKlein = parseFloat(preisProduct.dataset.preis).toFixed(2);
-        const preisMedium = (preisKlein * 2).toFixed(2);
-        const preisGroß = (preisKlein * 3).toFixed(2);
+
+        const preisMedium = amount * 2;
+        const preisGroß = amount * 3;
 
         let newPreis;
 
         if (element.value === 'medium') {
-            mengeProduct.innerHTML = '200g';
+            if(amountText.innerHTML.includes('ml')){ amountText.innerHTML = `${preisMedium}ml`}
+            else{amountText.innerHTML = `${preisMedium}g`;}
             newPreis = preisMedium;
+
+            numberAmount = 2;
         } else if (element.value === 'groß') {
-            mengeProduct.innerHTML = '300g';
+            if(amountText.innerHTML.includes('ml')){ amountText.innerHTML = `${preisGroß}ml`}
+            else{amountText.innerHTML = `${preisGroß}g`;}
             newPreis = preisGroß;
+
+            numberAmount = 3;
         } else {
-            mengeProduct.innerHTML = '100g';
-            newPreis = preisKlein;
+            if(amountText.innerHTML.includes('ml')){ amountText.innerHTML = `${amount}ml`}
+            else{amountText.innerHTML = `${amount}g`;}
+            newPreis = amount;
+
+            numberAmount = 1;
         }
 
         preisProduct.innerHTML = `${newPreis}€`;
 
-
         if (button && button.classList.contains('entfernen')) {
             const productContainer = element.closest('.product-container');
-        
+
             if (productContainer.closest('#basis')) {
                 preisBasis = parseFloat(newPreis);
             } else if (productContainer.closest('#fluessigkeit')) {
                 preisFluessigkeit = parseFloat(newPreis);
                 console.log('mudou');
-                
             }
-            
+
             updateTotal();
         }
+
     });
 });
-
-
-
-// MENGE   MENGE   MENGE   MENGE   MENGE  MENGE   MENGE   MENGE   MENGE   MENGE  
-
-
-
-
-/* buttonMengeMinus.forEach(element => {
-    element.addEventListener('click', () => {
-        const mengeProduct = element.closest('.product-info').querySelector('.menge');
-        const preisProduct = element.closest('.product-info').querySelector('.product-name');
-
-        const preisPortion = parseFloat(preisProduct.dataset.preis).toFixed(2);
-        const mengePortion = 20;
-
-        const anzahlContainer = element.closest('.anzahl');
-        const anzahlPortion = anzahlContainer.querySelector('.nummer');
-        let anzahl = parseInt(anzahlPortion.textContent) || 1;
-
-        if (anzahl > 1) {
-            anzahl--;
-            anzahlPortion.textContent = `${anzahl} Portion${anzahl > 1 ? 'en' : ''}`;
-            preisProduct.innerHTML = `${(preisPortion * anzahl).toFixed(2) + '€'}`;
-            mengeProduct.innerHTML = `${(mengePortion * anzahl) + 'g'}`;
-        }
-        updateTotal()
-    });
-}); */

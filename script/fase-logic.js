@@ -110,11 +110,7 @@ function updatePriceContainer(faseList) {
 
 
 
-
-
-
-
-//PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   
+//PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS 
 
 function buttonPlus(button, faseList) {
 
@@ -143,7 +139,8 @@ function buttonPlus(button, faseList) {
     if (portion < 3) {
         portion++;
 
-        const newPreis = preisProduct + (preisProduct/(portion - 1));
+        const newPreisFlat = preisProduct + (preisProduct/(portion - 1));
+        const newPreis = parseFloat(newPreisFlat.toFixed(2));
 
         portionText.textContent = `${portion} Portion${portion > 1 ? 'en' : ''}`;
         preisEuro.innerHTML = `${newPreis.toFixed(2) + '€'}`;
@@ -151,5 +148,46 @@ function buttonPlus(button, faseList) {
 
 
         faseList.preisArray[indexProduct] = newPreis;
+        updatePriceContainer(faseList);
     } 
+
+    console.log(faseList.preisArray);
+}
+
+
+//MINUS   MINUS   MINUS   MINUS   MINUS   MINUS   MINUS   MINUS   MINUS
+
+function buttonMinus(button, faseList) {
+
+    const nameProduct = button.closest('.product-container').querySelector('.product-name').innerHTML;
+    const indexProduct = faseList.nameArray.findIndex(nome => nome === nameProduct);
+
+    const preisEuro = button.closest('.product-container').querySelector('.preis');
+    const amountText = button.closest('.product-info').querySelector('.menge');
+    const portionText = button.closest('.anzahl').querySelector('.nummer');
+
+    let portion = parseInt(portionText.textContent) || 1;
+
+    const basePreis = parseFloat(preisEuro.innerHTML.replace('€', '').trim()) / portion;
+    const baseAmount = parseFloat(amountText.innerHTML.replace('g', '').trim()) / portion;
+
+    if (portion > 1) {
+        portion--;
+
+        const newPreisFlat = basePreis * portion;
+        const newPreis = parseFloat(newPreisFlat.toFixed(2));
+        const newAmount = baseAmount * portion;
+
+        portionText.textContent = `${portion} Portion${portion > 1 ? 'en' : ''}`;
+        preisEuro.innerHTML = `${newPreis.toFixed(2)}€`;
+        amountText.innerHTML = `${newAmount.toFixed(0)}g`;
+
+        if (indexProduct !== -1) {
+            faseList.preisArray[indexProduct] = newPreis;
+            updatePriceContainer(faseList);
+        }
+
+        console.log(faseList.preisArray);
+        
+    }
 }

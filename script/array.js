@@ -1,22 +1,22 @@
 const arrayBasis = [
-    { name: 'Zarte Haferflocken', preis: 0.50, pic:'assets/01.basis/01.png'},
-    { name: 'Buchweizenflocken', preis: 1.40, pic:'assets/01.basis/02.png'},
-    { name: 'Maisgrieß (Polenta)', preis: 0.60, pic:'assets/01.basis/03.png'},
-    { name: 'Hirseflocken', preis: 1.27, pic:'assets/01.basis/04.png'},
-    { name: 'Haferschrot', preis: 0.70, pic:'assets/01.basis/05.png'},
-    { name: 'Dinkelflocken', preis: 0.80, pic:'assets/01.basis/06.png'},
-    { name: 'Vollkorn-Reisflocken', preis: 1.30, pic:'assets/01.basis/07.png'},
-    { name: 'Amaranth-Pops', preis: 2.00, pic:'assets/01.basis/08.png'},
-    { name: 'Schrot', info: '(Gersten| Roggen)', preis: 0.75, pic:'assets/01.basis/09.png'},
-    { name: 'Cornflakes', info: '(zuckerfrei| Honig)', preis: 1.17, pic:'assets/01.basis/10.png'},
-    { name: 'Crunchy Müsli', info: '(Schoko| Nuss| Honig)', preis: 1.29, pic:'assets/01.basis/11.png'},
-    { name: 'Haferflocken', info: '(großblättrig)', preis: 0.54, pic:'assets/01.basis/12.png'},
-    { name: 'Quinoaflocken', preis: 1.50, pic:'assets/01.basis/13.png'},
-    { name: 'Gerstenflocken', preis: 0.75, pic:'assets/01.basis/14.png'},
-    { name: 'Geröstete Haferflakes', preis: 1.07, pic:'assets/01.basis/15.png'},
-    { name: 'Müsliriegelstückchen', preis: 2.33, pic:'assets/01.basis/16.png'},
-    { name: 'Rice Krispies', preis: 1.27, pic:'assets/01.basis/17.png'},
-    { name: 'Weizenkleie', preis: 1.25, pic:'assets/01.basis/18.png'}
+    { name: 'Zarte Haferflocken', preis: 0.50, amount: 80, pic:'assets/01.basis/01.png'},
+    { name: 'Buchweizenflocken', preis: 1.40, amount: 65, pic:'assets/01.basis/02.png'},
+    { name: 'Maisgrieß (Polenta)', preis: 0.60, amount: 80, pic:'assets/01.basis/03.png'},
+    { name: 'Hirseflocken', preis: 1.27, amount: 65, pic:'assets/01.basis/04.png'},
+    { name: 'Haferschrot', preis: 0.70, amount: 70, pic:'assets/01.basis/05.png'},
+    { name: 'Dinkelflocken', preis: 0.80, amount: 70, pic:'assets/01.basis/06.png'},
+    { name: 'Vollkorn-Reisflocken', preis: 1.30, amount: 65, pic:'assets/01.basis/07.png'},
+    { name: 'Amaranth-Pops', preis: 2.00, amount: 50, pic:'assets/01.basis/08.png'},
+    { name: 'Schrot', info: '(Gersten| Roggen)', preis: 0.75, amount: 70, pic:'assets/01.basis/09.png'},
+    { name: 'Cornflakes', info: '(zuckerfrei| Honig)', preis: 1.17, amount: 65, pic:'assets/01.basis/10.png'},
+    { name: 'Crunchy Müsli', info: '(Schoko| Nuss| Honig)', preis: 1.29, amount: 70, pic:'assets/01.basis/11.png'},
+    { name: 'Haferflocken', info: '(großblättrig)', preis: 0.54, amount: 80, pic:'assets/01.basis/12.png'},
+    { name: 'Quinoaflocken', preis: 1.50, amount: 65, pic:'assets/01.basis/13.png'},
+    { name: 'Gerstenflocken', preis: 0.75, amount: 70, pic:'assets/01.basis/14.png'},
+    { name: 'Geröstete Haferflakes', preis: 1.07, amount: 65, pic:'assets/01.basis/15.png'},
+    { name: 'Müsliriegelstückchen', preis: 2.33, amount: 50, pic:'assets/01.basis/16.png'},
+    { name: 'Rice Krispies', preis: 1.27, amount: 65, pic:'assets/01.basis/17.png'},
+    { name: 'Weizenkleie', preis: 1.25, amount: 50, pic:'assets/01.basis/18.png'}
 ];
 
 //20g
@@ -79,13 +79,13 @@ const arraySuperfoods = [
 ];
 
 const arrayFluessigkeit = [
-    { name: 'Hafermilch', preis: 0.19, pic:'assets/06.fluessigkeit/01.png' },
-    { name: 'Mandelmilch', preis: 0.23, pic:'assets/06.fluessigkeit/02.png' },
-    { name: 'Kokosmilch', preis: 0.23, pic:'assets/06.fluessigkeit/03.png' },
-    { name: 'Sojamilch', preis: 0.18, pic:'assets/06.fluessigkeit/04.png' },
-    { name: 'Reismilch', preis: 0.19, pic:'assets/06.fluessigkeit/05.png' },
-    { name: 'Vollmilch', preis: 0.16, pic:'assets/06.fluessigkeit/06.png'},
-    { name: 'Joghurt', info: '(natur| griechisch)', preis: 0.38, pic:'assets/06.fluessigkeit/07.png' },
-    { name: 'Wasser', info: '(sehr weich und mikrofiltriert)', preis: 0.19, pic:'assets/06.fluessigkeit/08.png' },
-    { name: 'Kokoswasser', preis: 0.21, pic:'assets/06.fluessigkeit/09.png' }
+    { name: 'Hafermilch', preis: 0.19, amount: 100, unit: 'ml', pic:'assets/06.fluessigkeit/01.png' },
+    { name: 'Mandelmilch', preis: 0.23, amount: 100, unit: 'ml', pic:'assets/06.fluessigkeit/02.png' },
+    { name: 'Kokosmilch', preis: 0.23, amount: 100, unit: 'ml', pic:'assets/06.fluessigkeit/03.png' },
+    { name: 'Sojamilch', preis: 0.18, amount: 100, unit: 'ml', pic:'assets/06.fluessigkeit/04.png' },
+    { name: 'Reismilch', preis: 0.19, amount: 100, unit: 'ml', pic:'assets/06.fluessigkeit/05.png' },
+    { name: 'Vollmilch', preis: 0.16, amount: 100, unit: 'ml', pic:'assets/06.fluessigkeit/06.png'},
+    { name: 'Joghurt', info: '(natur| griechisch)', preis: 0.38, amount: 80, unit: 'g', pic:'assets/06.fluessigkeit/07.png' },
+    { name: 'Wasser', info: '(sehr weich und mikrofiltriert)', preis: 0.19, amount: 100, unit: 'ml', pic:'assets/06.fluessigkeit/08.png' },
+    { name: 'Kokoswasser', preis: 0.21, amount: 100, unit: 'ml', pic:'assets/06.fluessigkeit/09.png' }
 ];
