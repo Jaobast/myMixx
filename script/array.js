@@ -54,10 +54,10 @@ const arrayNuesse = [
     { name: 'Pistazien', preis: 1.10, pic:'assets/04.nuesse/04.png' },
     { name: 'Cashewkerne', preis: 0.64, pic:'assets/04.nuesse/05.png' },
     { name: 'Pekanüsse', preis: 0.67, pic:'assets/04.nuesse/06.png' },
-    { name: 'Sonnenblumenkerne', preis: 0.25 },
+    { name: 'Sonnenblumenkerne', preis: 0.25, pic:'assets/04.nuesse/06.png' },
     { name: 'Kürbiskerne', preis: 0.47, pic:'assets/04.nuesse/07.png' },
     { name: 'Chiasamen', preis: 0.70, pic:'assets/04.nuesse/08.png' },
-    { name: 'Leinsamen', preis: 0.25, pic:'assets/04.nuesse/19.png' },
+    { name: 'Leinsamen', preis: 0.25, pic:'assets/04.nuesse/09.png' },
     { name: 'Hanfsamen', preis: 0.80, pic:'assets/04.nuesse/10.png' },
     { name: 'Sesamsamen', preis: 0.28, pic:'assets/04.nuesse/11.png' }
 ];

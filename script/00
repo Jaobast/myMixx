@@ -1,22 +1,22 @@
-weiterBttn.addEventListener('click', () => {
+/* buttonMengePlus.forEach(element => {
+    element.addEventListener('click', () => {
+        const mengeProduct = element.closest('.product-info').querySelector('.menge');
+        const preisProduct = element.closest('.product-info').querySelector('.preis');
+
+        const preisPortion = parseFloat(preisProduct.dataset.preis).toFixed(2);
+        const mengePortion = 20;
+
+        const anzahlContainer = element.closest('.anzahl');
+        const anzahlPortion = anzahlContainer.querySelector('.nummer');
+        let anzahl = parseInt(anzahlPortion.textContent) || 1;
 
 
-    if (nummer < arrayBttn.length - 1) {
-        nummer++;
-        
-
-        for (let i = 0; i < arrayContainer.length; i++) {
-            arrayContainer[i].classList.add("hidden");
-            arrayBttn[i].classList.remove("chosen");
+        if (anzahl < 3) {
+            anzahl++;
+            anzahlPortion.textContent = `${anzahl} Portion${anzahl > 1 ? 'en' : ''}`;
+            preisProduct.innerHTML = `${(preisPortion * anzahl).toFixed(2) + '€'}`;
+            mengeProduct.innerHTML = `${(mengePortion * anzahl) + 'g'}`;
         }
-
-        arrayContainer[nummer].classList.remove("hidden");
-        arrayBttn[nummer].classList.add("chosen");
-
-        if (arrayBttn[arrayBttn.length - 1].classList.contains("chosen")) {
-            weiterBttn.textContent = "BESTELLEN";
-        } else {
-            weiterBttn.textContent = "WEITER";
-        }
-    }
-});
+        updateTotal()
+    });
+}); */

@@ -101,9 +101,9 @@ arrayNuesse.forEach(product => {
                 </div>
 
                 <div class="anzahl">
-                   <button class="minus">-</button>
-                   <p class="nummer">1 Portion</p>
-                   <button class="plus">+</button>
+                  <button class="minus">-</button>
+                  <p class="nummer">1 Portion</p>
+                  <button class="plus">+</button>
                 </div>
                 <button class="hinzufuegen">hinzufügen</button>
             </div>
@@ -214,61 +214,9 @@ selectMenge.forEach(element => {
 // MENGE   MENGE   MENGE   MENGE   MENGE  MENGE   MENGE   MENGE   MENGE   MENGE  
 
 
-function buttonPlus(element, preisArray, nameArray) {
-    const mengeProduct = element.closest('.product-info').querySelector('.menge');
-    const preisProduct = element.closest('.product-info').querySelector('.preis');
-    const nameProduct = element.closest('.product-container').querySelector('.product-name').innerHTML.trim();
 
 
-    const preisPortion = parseFloat(preisProduct.dataset.preis).toFixed(2);
-    const mengePortion = 20;
-
-    const anzahlContainer = element.closest('.anzahl');
-    const anzahlPortion = anzahlContainer.querySelector('.nummer');
-    let anzahl = parseInt(anzahlPortion.textContent) || 1;
-    
-    if (anzahl < 3) {
-        anzahl++;
-        anzahlPortion.textContent = `${anzahl} Portion${anzahl > 1 ? 'en' : ''}`;
-        preisProduct.innerHTML = `${(preisPortion * anzahl).toFixed(2) + '€'}`;
-        mengeProduct.innerHTML = `${(mengePortion * anzahl) + 'g'}`;
-    }
-
-    console.log('Produtos:', nameArray);
-    console.log('Preços:', preisArray);
-
-}
-
-
-
-
-
-
-
-/* buttonMengePlus.forEach(element => {
-    element.addEventListener('click', () => {
-        const mengeProduct = element.closest('.product-info').querySelector('.menge');
-        const preisProduct = element.closest('.product-info').querySelector('.preis');
-
-        const preisPortion = parseFloat(preisProduct.dataset.preis).toFixed(2);
-        const mengePortion = 20;
-
-        const anzahlContainer = element.closest('.anzahl');
-        const anzahlPortion = anzahlContainer.querySelector('.nummer');
-        let anzahl = parseInt(anzahlPortion.textContent) || 1;
-
-
-        if (anzahl < 3) {
-            anzahl++;
-            anzahlPortion.textContent = `${anzahl} Portion${anzahl > 1 ? 'en' : ''}`;
-            preisProduct.innerHTML = `${(preisPortion * anzahl).toFixed(2) + '€'}`;
-            mengeProduct.innerHTML = `${(mengePortion * anzahl) + 'g'}`;
-        }
-        updateTotal()
-    });
-}); */
-
-buttonMengeMinus.forEach(element => {
+/* buttonMengeMinus.forEach(element => {
     element.addEventListener('click', () => {
         const mengeProduct = element.closest('.product-info').querySelector('.menge');
         const preisProduct = element.closest('.product-info').querySelector('.product-name');
@@ -288,4 +236,4 @@ buttonMengeMinus.forEach(element => {
         }
         updateTotal()
     });
-});
+}); */

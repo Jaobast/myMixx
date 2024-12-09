@@ -7,14 +7,11 @@ let preisTotal = 0;
 
 function updatePricePlus(preisProduct) {
     preisFruechteTotal += preisProduct;
-    console.log('somando frutas: ' + preisFruechteTotal);
-    
 }
 
 
 function updatePriceMinus(preisProduct){
     preisFruechteTotal -= preisProduct;
-    console.log('diminuindo frutas: ' + preisFruechteTotal);
 }
 
 function updateTotal() {
@@ -25,6 +22,4 @@ function updateTotal() {
     } else {
         document.querySelector('.total-price').innerHTML = '';
     }
-
-    console.log('Esse é o total: ' + preisTotal);
 }

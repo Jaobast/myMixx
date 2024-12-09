@@ -115,6 +115,51 @@ const buttonPlusFruechte = productListFruechte.querySelectorAll('.plus');
 
 buttonPlusFruechte.forEach(element => {
     element.addEventListener('click', function() {
-        buttonPlus(this, preisFruechte, nameFruechte);
+        buttonPlus(this, fruechteList);
     });
 });
+
+
+
+
+
+
+//PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   PLUS   
+
+function buttonPlus(button, faseList) {
+
+    const nameProduct = button.closest('.product-container').querySelector('.product-name').innerHTML;
+    const indexProduct = faseList.nameArray.findIndex(nome => nome === nameProduct);
+
+
+    const preisEuro = button.closest('.product-container').querySelector('.preis');
+    let preisProduct;
+
+    const amountText = button.closest('.product-info').querySelector('.menge');
+    const amount = parseFloat(amountText.innerHTML.replace('g', '').trim());
+
+    const portionText = button.closest('.anzahl').querySelector('.nummer');
+    let portion = parseInt(portionText.textContent) || 1;
+
+
+    if (indexProduct !== -1) {
+        preisProduct = faseList.preisArray[indexProduct];
+    } else {
+        preisProduct = parseFloat(preisEuro.innerHTML.replace('Portion', '').trim());
+    }
+
+
+
+    if (portion < 3) {
+        portion++;
+
+        const newPreis = preisProduct + (preisProduct/(portion - 1));
+
+        portionText.textContent = `${portion} Portion${portion > 1 ? 'en' : ''}`;
+        preisEuro.innerHTML = `${newPreis.toFixed(2) + '€'}`;
+        amountText.innerHTML = `${(amount + (amount/(portion - 1))) + 'g'}`;
+
+
+        faseList.preisArray[indexProduct] = newPreis;
+    } 
+}

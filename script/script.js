@@ -64,7 +64,6 @@ for (let i = 0; i < arrayBttn.length; i++) {
         arrayBttn[i].classList.add("chosen");
 
         valueNummer = arrayBttn[i].value;
-        console.log(valueNummer);
         
 
         if (arrayBttn[arrayBttn.length - 1].classList.contains("chosen")) {
