@@ -17,7 +17,10 @@ bttnFruechte.forEach(button => {
 });
 
 
-
+const plusFruechte = productListFruechte.querySelectorAll('.plus');
+plusFruechte.forEach(element => {
+    element.addEventListener('click', function() {buttonPlus(this, fruechteList);});
+});
 
 
 //SUESS   SUESS   SUESS   SUESS   SUESS   SUESS   SUESS   SUESS   SUESS   SUESS   
@@ -42,6 +45,14 @@ bttnSuess.forEach(button => {
 });
 
 
+
+const plusSuess = productListSuess.querySelectorAll('.plus');
+plusSuess.forEach(element => {
+    element.addEventListener('click', function() { buttonPlus(this, suessList);});
+});
+
+
+
 //NUESSE   NUESSE   NUESSE   NUESSE   NUESSE   NUESSE   NUESSE   NUESSE   NUESSE   
 
 let nameNuesse = [];
@@ -63,6 +74,12 @@ bttnNuesse.forEach(button => {
 });
 
 
+const plusNuesse = productListNuesse.querySelectorAll('.plus');
+plusNuesse.forEach(element => {
+    element.addEventListener('click', function() { buttonPlus(this, nuesseList);});
+});
+
+
 //SUPERFOODS   SUPERFOODS   SUPERFOODS   SUPERFOODS   SUPERFOODS   SUPERFOODS   
 
 let nameSuperfoods = [];
@@ -81,4 +98,10 @@ const superfoodsList = {
 const bttnSuperfoods = productListSuperfoods.querySelectorAll('.hinzufuegen');
 bttnSuperfoods.forEach(button => {
     button.addEventListener('click', (event) => addAndRemove(event, superfoodsList));
+});
+
+
+const plusSuperfoods = productListSuperfoods.querySelectorAll('.plus');
+plusSuperfoods.forEach(element => {
+    element.addEventListener('click', function() { buttonPlus(this, superfoodsList);});
 });

@@ -63,7 +63,7 @@ function updatePriceContainer(faseList) {
         faseList.priceContainer.innerHTML += `
             <div class="product-name-price-container"> 
                <p class="product-name-info">${faseList.nameArray[i]}</p>
-               <p class="product-price-info">${faseList.preisArray[i]} €</p>
+               <p class="product-price-info">${faseList.preisArray[i].toFixed(2)}€</p>
                <button class="delete"><i class="fa-regular fa-circle-xmark"></i></button>
             </div>   
         `;
@@ -108,16 +108,6 @@ function updatePriceContainer(faseList) {
     
 }
 
-
-
-
-const buttonPlusFruechte = productListFruechte.querySelectorAll('.plus');
-
-buttonPlusFruechte.forEach(element => {
-    element.addEventListener('click', function() {
-        buttonPlus(this, fruechteList);
-    });
-});
 
 
 
