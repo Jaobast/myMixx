@@ -35,13 +35,6 @@ const logo = document.querySelector("#logo img");
 const main = document.getElementById('main');
 const formularContain = document.querySelector('.formular-background');
 
-const basisFormular = document.querySelector('.basis-price-formular');
-const fruechteFormular = document.querySelector('.fruechte-price-formular');
-const suessFormular = document.querySelector('.suess-price-formular');
-const nuesseFormular = document.querySelector('.nuesse-price-formular');
-const superfoodFormular = document.querySelector('.superfood-price-formular');
-const fluessigkeitFormular = document.querySelector('.fluessigkeit-price-formular');
-
 
 let nummer = 0;
 let valueNummer = 0;
@@ -75,14 +68,15 @@ for (let i = 0; i < arrayBttn.length; i++) {
 }
 
 weiterBttn.addEventListener('click', () => {
-    if (valueNummer <= arrayContainer.length) {
+    if (valueNummer < arrayContainer.length-1) {
         valueNummer++;
+        console.log(valueNummer);
         
         for (let i = 0; i < arrayContainer.length; i++) {
             arrayContainer[i].classList.add("hidden");
             arrayBttn[i].classList.remove("chosen");
         }
-        
+
         arrayContainer[valueNummer].classList.remove("hidden");
         arrayBttn[valueNummer].classList.add("chosen");
 
@@ -91,7 +85,14 @@ weiterBttn.addEventListener('click', () => {
         } else {
             weiterBttn.textContent = "WEITER";
         }
+    } else {
+
+        displayProduct();
+
+        main.classList.add('hidden');
+        formularContain.classList.remove('hidden');
     }
+    
 });
 
 

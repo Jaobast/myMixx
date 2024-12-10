@@ -50,7 +50,7 @@ arrayFruechte.forEach(product => {
             <div class="product-info">
                 <img src = "${product.pic}">
                 <div class="preis-container">
-                   <p class='menge'>20g</p>
+                   <p class='menge'>${product.amount}g</p>
                    <p class='preis' data-preis="${product.preis}">${product.preis.toFixed(2)}€</p>
                 </div>
 
@@ -73,7 +73,7 @@ arraySuess.forEach(product => {
             <div class="product-info">
                 <img src = "${product.pic}">
                 <div class="preis-container">
-                   <p class='menge'>20g</p>
+                   <p class='menge'>${product.amount}${product.unit}</p>
                    <p class='preis' data-preis="${product.preis}">${product.preis.toFixed(2)}€</p>
                 </div>
 
@@ -96,7 +96,7 @@ arrayNuesse.forEach(product => {
             <div class="product-info">
                 <img src = "${product.pic}">
                 <div class="preis-container">
-                   <p class='menge'>20g</p>
+                   <p class='menge'>${product.amount}g</p>
                    <p class='preis' data-preis="${product.preis}">${product.preis.toFixed(2)}€</p>
                 </div>
 
@@ -119,7 +119,7 @@ arraySuperfoods.forEach(product => {
             <div class="product-info">
                 <img src = "${product.pic}">
                 <div class="preis-container">
-                   <p class='menge'>20g</p>
+                   <p class='menge'>${product.amount}${product.unit}</p>
                    <p class='preis' data-preis="${product.preis}">${product.preis.toFixed(2)}€</p>
                 </div>
 
@@ -159,71 +159,4 @@ arrayFluessigkeit.forEach(product => {
             </div>
         </div>
     `;
-});
-
-
-
-// SELECT   SELECT   SELECT   SELECT   SELECT   SELECT   SELECT   SELECT  
-
-const selectMenge = document.querySelectorAll('.select-menge');
-
-
-
-selectMenge.forEach(element => {
-    let numberAmount = 1;
-
-    element.addEventListener('change', (e) => {
-        
-        const amountText = element.closest('.product-info').querySelector('.menge');
-        let amount = parseInt(amountText.textContent);
-
-
-        amount = amount/numberAmount;
-        
-
-
-        const preisProduct = element.closest('.product-info').querySelector('.preis');
-        const button = element.closest('.product-info').querySelector('button.entfernen');
-
-        const preisMedium = amount * 2;
-        const preisGroß = amount * 3;
-
-        let newPreis;
-
-        if (element.value === 'medium') {
-            if(amountText.innerHTML.includes('ml')){ amountText.innerHTML = `${preisMedium}ml`}
-            else{amountText.innerHTML = `${preisMedium}g`;}
-            newPreis = preisMedium;
-
-            numberAmount = 2;
-        } else if (element.value === 'groß') {
-            if(amountText.innerHTML.includes('ml')){ amountText.innerHTML = `${preisGroß}ml`}
-            else{amountText.innerHTML = `${preisGroß}g`;}
-            newPreis = preisGroß;
-
-            numberAmount = 3;
-        } else {
-            if(amountText.innerHTML.includes('ml')){ amountText.innerHTML = `${amount}ml`}
-            else{amountText.innerHTML = `${amount}g`;}
-            newPreis = amount;
-
-            numberAmount = 1;
-        }
-
-        preisProduct.innerHTML = `${newPreis}€`;
-
-        if (button && button.classList.contains('entfernen')) {
-            const productContainer = element.closest('.product-container');
-
-            if (productContainer.closest('#basis')) {
-                preisBasis = parseFloat(newPreis);
-            } else if (productContainer.closest('#fluessigkeit')) {
-                preisFluessigkeit = parseFloat(newPreis);
-                console.log('mudou');
-            }
-
-            updateTotal();
-        }
-
-    });
 });

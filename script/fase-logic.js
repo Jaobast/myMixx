@@ -53,8 +53,6 @@ function removeProduct(button, nameProduct, preisProduct, faseList) {
 }
 
 function updatePriceContainer(faseList) {
-    console.log(faseList.nameArray);
-    console.log(faseList.preisArray);
     
     faseList.priceContainer.innerHTML = '';
 
@@ -144,14 +142,16 @@ function buttonPlus(button, faseList) {
 
         portionText.textContent = `${portion} Portion${portion > 1 ? 'en' : ''}`;
         preisEuro.innerHTML = `${newPreis.toFixed(2) + '€'}`;
-        amountText.innerHTML = `${(amount + (amount/(portion - 1))) + 'g'}`;
+
+        if(amountText.innerHTML.includes('ml')){
+            amountText.innerHTML = `${(amount + (amount/(portion - 1))) + 'ml'}`;
+        } else { amountText.innerHTML = `${(amount + (amount/(portion - 1))) + 'g'}`;}
 
 
         faseList.preisArray[indexProduct] = newPreis;
         updatePriceContainer(faseList);
     } 
 
-    console.log(faseList.preisArray);
 }
 
 
@@ -180,14 +180,15 @@ function buttonMinus(button, faseList) {
 
         portionText.textContent = `${portion} Portion${portion > 1 ? 'en' : ''}`;
         preisEuro.innerHTML = `${newPreis.toFixed(2)}€`;
-        amountText.innerHTML = `${newAmount.toFixed(0)}g`;
+
+        if(amountText.innerHTML.includes('ml')){
+            amountText.innerHTML = `${newAmount.toFixed(0)}ml`;
+        }else { amountText.innerHTML = `${newAmount.toFixed(0)}g`;}
 
         if (indexProduct !== -1) {
             faseList.preisArray[indexProduct] = newPreis;
             updatePriceContainer(faseList);
         }
-
-        console.log(faseList.preisArray);
         
     }
 }

@@ -1,21 +1,35 @@
-/* buttonMengeMinus.forEach(element => {
-    element.addEventListener('click', () => {
-        const mengeProduct = element.closest('.product-info').querySelector('.menge');
-        const preisProduct = element.closest('.product-info').querySelector('.product-name');
+/* function displayProduct(){
 
-        const preisPortion = parseFloat(preisProduct.dataset.preis).toFixed(2);
-        const mengePortion = 20;
+    nameFruechte.forEach(nameProduct =>{
+        
+        const index = nameFruechte.indexOf(nameProduct);
+        const preisProduct = preisFruechte[index];
+        
+        const div = document.querySelector('.display-fruechte');
+        
+        div.innerHTML += `
+            <div class="product-name-price-container"> 
+               <p class="product-name-info">${nameProduct}</p>
+               <p class="product-price-info">${preisProduct.toFixed(2)}€</p>
+               <button class="delete"><i class="fa-regular fa-circle-xmark"></i></button>
+            </div>   
+        `
+    })
 
-        const anzahlContainer = element.closest('.anzahl');
-        const anzahlPortion = anzahlContainer.querySelector('.nummer');
-        let anzahl = parseInt(anzahlPortion.textContent) || 1;
 
-        if (anzahl > 1) {
-            anzahl--;
-            anzahlPortion.textContent = `${anzahl} Portion${anzahl > 1 ? 'en' : ''}`;
-            preisProduct.innerHTML = `${(preisPortion * anzahl).toFixed(2) + '€'}`;
-            mengeProduct.innerHTML = `${(mengePortion * anzahl) + 'g'}`;
-        }
-        updateTotal()
-    });
-}); */
+    nameNuesse.forEach(nameProduct =>{
+
+        const index = nameNuesse.indexOf(nameProduct);
+        const preisProduct = preisNuesse[index];
+        
+        const div = document.querySelector('.display-nuesse');
+        
+        div.innerHTML += `
+            <div class="product-name-price-container"> 
+               <p class="product-name-info">${nameProduct}</p>
+               <p class="product-price-info">${preisProduct.toFixed(2)}€</p>
+               <button class="delete"><i class="fa-regular fa-circle-xmark"></i></button>
+            </div>   
+        `
+    })
+} */

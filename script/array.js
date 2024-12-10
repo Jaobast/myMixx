@@ -21,61 +21,61 @@ const arrayBasis = [
 
 //20g
 const arrayFruechte = [
-    { name: 'Cranberries', preis: 0.40, pic:'assets/02.fruechte/01.png'},
-    { name: 'Rosinen', preis: 0.24, pic:'assets/02.fruechte/02.png' },
-    { name: 'Goji-Beeren', preis: 0.87, pic:'assets/02.fruechte/03.png' },
-    { name: 'Mangostückchen', preis: 0.67, pic:'assets/02.fruechte/04.png' },
-    { name: 'Ananasstücke', preis: 0.60, pic:'assets/02.fruechte/05.png' },
-    { name: 'Apfelringe', preis: 0.70, pic:'assets/02.fruechte/06.png' },
-    { name: 'Bananenchips', preis: 0.28, pic:'assets/02.fruechte/07.png' },
-    { name: 'Datteln', preis: 0.42, pic:'assets/02.fruechte/08.png' },
-    { name: 'Feigen', preis: 0.45, pic:'assets/02.fruechte/09.png' },
-    { name: 'Erdbeerscheiben', preis: 1.20, pic:'assets/02.fruechte/10.png' },
-    { name: 'Heidelbeeren', preis: 0.73, pic:'assets/02.fruechte/11.png' },
-    { name: 'Kirschen', preis: 0.67, pic:'assets/02.fruechte/12.png' },
-    { name: 'Aprikosen', preis: 0.40, pic:'assets/02.fruechte/13.png' }
+    { name: 'Cranberries', preis: 0.40, amount: 65, pic:'assets/02.fruechte/01.png'},
+    { name: 'Rosinen', preis: 0.24, amount: 70, pic:'assets/02.fruechte/02.png' },
+    { name: 'Goji-Beeren', preis: 0.87, amount: 50, pic:'assets/02.fruechte/03.png' },
+    { name: 'Mangostückchen', preis: 0.67, amount: 50, pic:'assets/02.fruechte/04.png' },
+    { name: 'Ananasstücke', preis: 0.60, amount: 50, pic:'assets/02.fruechte/05.png' },
+    { name: 'Apfelringe', preis: 0.70, amount: 35, pic:'assets/02.fruechte/06.png' },
+    { name: 'Bananenchips', preis: 0.28, amount: 65, pic:'assets/02.fruechte/07.png' },
+    { name: 'Datteln', preis: 0.42, amount: 65, pic:'assets/02.fruechte/08.png' },
+    { name: 'Feigen', preis: 0.45, amount: 65, pic:'assets/02.fruechte/09.png' },
+    { name: 'Erdbeerscheiben', preis: 1.20, amount: 35, pic:'assets/02.fruechte/10.png' },
+    { name: 'Heidelbeeren', preis: 0.73, amount: 50, pic:'assets/02.fruechte/11.png' },
+    { name: 'Kirschen', preis: 0.67, amount: 55, pic:'assets/02.fruechte/12.png' },
+    { name: 'Aprikosen', preis: 0.40, amount: 65, pic:'assets/02.fruechte/13.png' }
 ];
 
 //20g  30ml
 const arraySuess = [
-    { name: 'Dunkelschokoladen', info: '(Stücke)', preis: 0.52, pic:'assets/03.suess/01.png'},
-    { name: 'Weißschokoladen', info: '(Stücke)', preis: 0.51, pic:'assets/03.suess/02.png'},
-    { name: 'Karamellstücke', preis: 0.53, pic:'assets/03.suess/03.png'},
-    { name: 'Kokoschips', preis: 0.47, pic:'assets/03.suess/04.png'},
-    { name: 'Honig', preis: 0.72, pic:'assets/03.suess/05.png' },
-    { name: 'Ahornsirup', preis: 0.96, pic:'assets/03.suess/06.png' },
-    { name: 'Agavendicksaft', preis: 0.54, pic:'assets/03.suess/07.png' },
+    { name: 'Dunkelschokoladen', info: '(Stücke)', preis: 0.52, amount: 50, unit: 'g', pic:'assets/03.suess/01.png'},
+    { name: 'Weißschokoladen', info: '(Stücke)', preis: 0.51, amount: 50, unit: 'g', pic:'assets/03.suess/02.png'},
+    { name: 'Karamellstücke', preis: 0.53, amount: 65, unit: 'g', pic:'assets/03.suess/03.png'},
+    { name: 'Kokoschips', preis: 0.47, amount: 65, unit: 'g', pic:'assets/03.suess/04.png'},
+    { name: 'Honig', preis: 0.72, amount: 70, unit: 'ml', pic:'assets/03.suess/05.png' },
+    { name: 'Ahornsirup', preis: 0.96, amount: 70, unit: 'ml', pic:'assets/03.suess/06.png' },
+    { name: 'Agavendicksaft', preis: 0.54, amount: 70, unit: 'ml', pic:'assets/03.suess/07.png' },
 ];
 
 const arrayNuesse = [
-    { name: 'Mandeln', info: '(geröstet, gehackt, blättrig)', preis: 0.53, pic:'assets/04.nuesse/01.png' },
-    { name: 'Walnüsse', preis: 0.60, pic:'assets/04.nuesse/02.png' },
-    { name: 'Haselnüsse', preis: 0.56, pic:'assets/04.nuesse/03.png' },
-    { name: 'Pistazien', preis: 1.10, pic:'assets/04.nuesse/04.png' },
-    { name: 'Cashewkerne', preis: 0.64, pic:'assets/04.nuesse/05.png' },
-    { name: 'Pekanüsse', preis: 0.67, pic:'assets/04.nuesse/06.png' },
-    { name: 'Sonnenblumenkerne', preis: 0.25, pic:'assets/04.nuesse/06.png' },
-    { name: 'Kürbiskerne', preis: 0.47, pic:'assets/04.nuesse/07.png' },
-    { name: 'Chiasamen', preis: 0.70, pic:'assets/04.nuesse/08.png' },
-    { name: 'Leinsamen', preis: 0.25, pic:'assets/04.nuesse/09.png' },
-    { name: 'Hanfsamen', preis: 0.80, pic:'assets/04.nuesse/10.png' },
-    { name: 'Sesamsamen', preis: 0.28, pic:'assets/04.nuesse/11.png' }
+    { name: 'Mandeln', info: '(geröstet, gehackt, blättrig)', preis: 0.53, amount: 50, pic:'assets/04.nuesse/01.png' },
+    { name: 'Walnüsse', preis: 0.60, amount: 50, pic:'assets/04.nuesse/02.png' },
+    { name: 'Haselnüsse', preis: 0.56, amount: 50, pic:'assets/04.nuesse/03.png' },
+    { name: 'Pistazien', preis: 1.10, amount: 35, pic:'assets/04.nuesse/04.png' },
+    { name: 'Cashewkerne', preis: 0.64, amount: 50, pic:'assets/04.nuesse/05.png' },
+    { name: 'Pekanüsse', preis: 0.67, amount: 50, pic:'assets/04.nuesse/06.png' },
+    { name: 'Sonnenblumenkerne', preis: 0.25, amount: 65, pic:'assets/04.nuesse/06.png' },
+    { name: 'Kürbiskerne', preis: 0.47, amount: 50, pic:'assets/04.nuesse/07.png' },
+    { name: 'Chiasamen', preis: 0.70, amount: 35, pic:'assets/04.nuesse/08.png' },
+    { name: 'Leinsamen', preis: 0.25, amount: 65, pic:'assets/04.nuesse/09.png' },
+    { name: 'Hanfsamen', preis: 0.80, amount: 35, pic:'assets/04.nuesse/10.png' },
+    { name: 'Sesamsamen', preis: 0.28, amount: 65, pic:'assets/04.nuesse/11.png' }
 ];
 
 
 const arraySuperfoods = [
-    { name: 'Kakaonibs', preis: 0.90, pic:'assets/05.superfood/01.png' },
-    { name: 'Matcha-Pulver', preis: 4.80, pic:'assets/05.superfood/02.png' },
-    { name: 'Maca-Pulver', preis: 1.10, pic:'assets/05.superfood/03.png' },
-    { name: 'Baobab-Pulver', preis: 1.20, pic:'assets/05.superfood/04.png' },
-    { name: 'Spirulina', preis: 2.80, pic:'assets/05.superfood/05.png' },
-    { name: 'Acai-Beeren', preis: 1.70, pic:'assets/05.superfood/06.png' },
-    { name: 'Lucuma-Pulver', preis: 1.00, pic:'assets/05.superfood/07.png' },
-    { name: 'Weizengraspulver', preis: 1.30, pic:'assets/05.superfood/08.png' },
-    { name: 'Gojipulver', preis: 1.50, pic:'assets/05.superfood/09.png' },
-    { name: 'Kokosflocken', preis: 0.47, pic:'assets/05.superfood/10.png' },
-    { name: 'Trockene Maulbeeren', preis: 0.73, pic:'assets/05.superfood/11.png' },
-    { name: 'Agavendicksaft', preis: 0.66 }
+    { name: 'Kakaonibs', preis: 0.90, amount: 35, unit: 'g', pic:'assets/05.superfood/01.png' },
+    { name: 'Matcha-Pulver', preis: 1.80, amount: 20, unit: 'g', pic:'assets/05.superfood/02.png' },
+    { name: 'Maca-Pulver', preis: 1.10, amount: 35, unit: 'g', pic:'assets/05.superfood/03.png' },
+    { name: 'Baobab-Pulver', preis: 1.20, amount: 35, unit: 'g', pic:'assets/05.superfood/04.png' },
+    { name: 'Spirulina', preis: 2.30, amount: 20, unit: 'g', pic:'assets/05.superfood/05.png' },
+    { name: 'Acai-Beeren', preis: 1.70, amount: 35, unit: 'g', pic:'assets/05.superfood/06.png' },
+    { name: 'Lucuma-Pulver', preis: 1.00, amount: 35, unit: 'g', pic:'assets/05.superfood/07.png' },
+    { name: 'Weizengraspulver', preis: 1.30, amount: 35, unit: 'g', pic:'assets/05.superfood/08.png' },
+    { name: 'Gojipulver', preis: 1.50, amount: 35, unit: 'g', pic:'assets/05.superfood/09.png' },
+    { name: 'Kokosflocken', preis: 0.47, amount: 50, unit: 'g', pic:'assets/05.superfood/10.png' },
+    { name: 'Trockene Maulbeeren', preis: 0.73, amount: 50, unit: 'g', pic:'assets/05.superfood/11.png' },
+    { name: 'Agavendicksaft', preis: 0.54, amount: 70, unit: 'ml', pic:'assets/05.superfood/12.png' }
 ];
 
 const arrayFluessigkeit = [

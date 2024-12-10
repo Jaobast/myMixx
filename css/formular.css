@@ -99,8 +99,14 @@
 }
 
 .beleg-price-formular{
-    display: flex; flex-direction: row;
+    display: flex; flex-direction: column;
     justify-content: space-between;
+}
+
+.beleg-price-formular .list{
+    display: flex; flex-direction: column;
+    align-items: end;
+    gap: 5px;
 }
 
 
@@ -118,12 +124,12 @@
     width: 100%;
 }
 
-.price-container button{
+.price-container button, .beleg-price-formular button{
     background-color: transparent; border: none;
     font-size: 20px;
 }
 
-.price-container i{
+.price-container i, .beleg-price-formular i{
     background-color: var(--orange); color: black;
     border-radius: 50px; padding:  0;
 }
@@ -131,7 +137,13 @@
 .price-container i:hover{
     background-color: transparent; color: white;
     font-size: 22px;
-    margin-left: -2px;
+    margin-left: -1px; margin-right: -1px;
+}
+
+.beleg-price-formular i:hover{
+    background-color: transparent; color: black;
+    font-size: 22px; font-weight: 600;
+    margin-left: -1px; margin-right: -1px;
 }
 
 .product-name-price-container{

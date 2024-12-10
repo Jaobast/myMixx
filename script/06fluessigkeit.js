@@ -100,3 +100,20 @@ deleteFluessigkeit.addEventListener('click', () =>{
         }
     });
 })
+
+
+
+
+
+
+
+
+
+
+const selectFluessigkeit = productListFluessigkeit.querySelectorAll('.select-menge');
+selectFluessigkeit.forEach(element => {
+    let numberAmount = 1;
+    element.addEventListener('change', (event) => {
+        numberAmount = selectAmount(element, preisFluessigkeit, nameFluessigkeit, numberAmount);
+    });
+});
