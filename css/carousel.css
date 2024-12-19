@@ -1,0 +1,29 @@
+
+.slider-wrapper{
+    overflow: hidden;
+    width: 70vw;
+    margin: 18vh 7vw 55px;
+    user-select: none;
+}
+
+.slider-wrapper .swiper-pagination-bullet{
+    background: var(--yellow);
+    height: 15px;
+    width: 15px;
+    user-select: none;
+}
+
+.swiper-slide-button{
+    color: #000;
+    margin-top: 30px;
+    transition: 0.3s ease;
+    user-select: none;
+}
+
+.swiper-slide-button:hover{
+    color: var(--yellow);
+}
+
+.card-list{
+    margin-bottom: 300px;
+}

@@ -1,0 +1,14 @@
+@media (min-width: 2000px) {
+
+    .product-info img{
+        margin: 2vh auto;
+    }
+
+    .slider-wrapper{
+        margin: 22vh 7vw 55px;
+    }
+
+    .product button{
+        font-size: var(--text-XXL);
+    }
+}

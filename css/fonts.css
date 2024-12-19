@@ -1,0 +1,13 @@
+
+  @font-face {
+    font-display: swap;
+    font-family: 'Baloo Thambi 2';
+    font-style: normal;
+    src: url(./fonts/BalooThambi2-Regular.ttf);
+  }
+  @font-face {
+    font-display: swap;
+    font-family: 'Lilita One';
+    font-style: normal;
+    src: url(./fonts/LilitaOne-Regular.ttf);
+  }

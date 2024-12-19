@@ -1,0 +1,31 @@
+const allDeleteBttn = document.querySelectorAll('.delete-formular');
+allDeleteBttn.forEach(bttnElement => {
+    bttnElement.addEventListener('click', (event) => {
+        const bttn = event.target;
+        const nameProduct = bttn.closest('.product-name-price-container').querySelector('.product-name-info').innerHTML;
+        const preisText = bttn.closest('.product-name-price-container').querySelector('.product-price-info').innerHTML;
+        const preisProduct = parseFloat(preisText.replace('€', '').replace(',', '.'));
+    
+        console.log(nameProduct);
+        console.log(preisProduct);
+    
+        let index = nameFruechte.findIndex(nome => nome === nameProduct);
+    
+        if (index !== -1 && preisFruechte[index] === preisProduct) {
+            nameFruechte.splice(index, 1);
+            preisFruechte.splice(index, 1);
+        }
+
+        preisFruechteTotal = preisFruechte.reduce((acc, preis) => acc + preis, 0);
+    
+        console.log('-------------------');
+        console.log(index);
+    
+        console.log(nameFruechte);
+        console.log(preisFruechte);
+
+        updatePriceContainer(fruechteList);
+        updateTotal();
+    });
+    
+})

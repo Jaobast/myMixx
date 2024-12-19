@@ -1,0 +1,287 @@
+.formular-background{
+    position: absolute;
+    top: 100vh;
+    overflow: hidden;
+    height: -webkit-fill-available;
+    height: 100vh; width: 100vw;
+    background-color: white;
+
+
+    display: flex; flex-direction: row;
+}
+
+
+.formular-beleg-container{
+    width: 50%; height: 100%;
+
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+}
+
+.formular-beleg-container .relative{
+    overflow: hidden;
+    overflow: auto; white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 20px;
+}
+
+.formular-beleg{
+    background-color: white;
+    border: 1px solid black; border-radius: 30px;
+    width: 70%; height: 70%;
+}
+
+
+.formular-container{
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: start;
+}
+
+
+.formular-background h1{
+    font-family: "Lilita One", serif;
+    text-transform: uppercase;
+
+    margin-bottom: 50px;
+}
+
+
+.label-input{
+    display: flex; flex-direction: column;
+
+    width: 350px;
+    margin-bottom: 15px;
+}
+
+
+.label-input input, .label-input select{
+    border: 1px solid black; border-radius: 12px;
+    background-color: white; appearance: none;
+    height: 50px; color: black;
+
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.label-input input:hover, .label-input input:focus, .label-input select:focus{
+    outline: none;
+    border: 2px solid var(--green); border-radius: 12px;
+}
+
+.relative{
+    position: relative;
+}
+
+.alarm-right{
+    position: absolute; right: 0; top: 3px;
+    font-size: 13px;
+    color: red;
+}
+
+.alarm-left{
+    position: absolute; left: 10px; bottom: -22px;
+    font-size: 13px;
+    color: red;
+    white-space: nowrap;
+}
+
+
+
+
+.abhol-container{
+    display: flex; flex-direction: row;
+    gap: 30px;
+}
+
+.abhol-container .label-input{
+    width: 160px;
+}
+
+
+.formular-beleg img{
+    width: 50%;
+    margin: auto;
+}
+
+.formular-beleg .img{
+    width: 100%;
+    height: 30%;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+}
+
+.formular-beleg .total-container{
+    margin-top: 10px;
+}
+
+.beleg-price-formular{
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+}
+
+.beleg-price-formular .list{
+    display: flex; flex-direction: column;
+    align-items: end;
+    gap: 5px;
+}
+
+
+.beleg-price{
+    display: flex; flex-direction: column;
+    justify-content: flex-start; align-items: flex-start;
+}
+.total-price {
+
+    transform: translateY(-50%);
+
+    font-size: 30px; font-weight: 700;
+    background-color: var(--orange);
+    padding: 0 20px; border-radius: 100px;
+    transform: rotate(-7deg);
+    margin-left: 90px;
+    margin-top: -50px;
+}
+
+.price-container{
+    display: flex; flex-direction: column;
+    align-items: flex-end;
+
+    gap:5px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.price-container button, .beleg-price-formular button{
+    background-color: transparent; border: none;
+    font-size: 20px;
+}
+
+.price-container i, .beleg-price-formular i{
+    background-color: var(--orange); color: black;
+    border-radius: 50px; padding:  0;
+}
+
+.price-container i:hover{
+    background-color: transparent; color: white;
+    font-size: 22px;
+    margin-left: -1px; margin-right: -1px;
+}
+
+.beleg-price-formular i:hover{
+    background-color: transparent; color: black;
+    font-size: 22px; font-weight: 600;
+    margin-left: -1px; margin-right: -1px;
+}
+
+.product-name-price-container{
+    display: flex; flex-direction: row;
+    gap: 15px;
+}
+
+.titel{
+    font-size: 25px; font-weight: 700;
+}
+
+.product-name-price-container p{
+    font-size: 20px; font-weight: 700;
+}
+
+.total-div{
+    position: relative;
+    width: fit-content;
+}
+
+.total-price-formular{
+    position: absolute;
+    top: -20%; right: -140px; transform: translateY(-50%);
+
+    font-size: 30px; font-weight: 700;
+    background-color: var(--green);
+    padding: 0 20px; border-radius: 100px;
+    transform: rotate(-7deg);
+}
+
+.dash-black::before{
+    background: repeating-linear-gradient(
+        to right,
+        black,
+        black 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+
+#back{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+
+    top: 5vh; left: calc(7.5vw - 23px);
+
+    display: flex; flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+    font-family: "Lilita One", serif;
+    font-size: 30px; text-transform: uppercase;
+    color: black;
+    padding: 5px 20px;
+    border: 3px solid transparent; border-radius: 50px;
+}
+
+#back:hover{
+    background-color: var(--green);
+    border: 3px solid black;
+}
+
+
+#bestellen-submit{
+    right: 7.5vw;
+}
+
+
+#day, #hour {
+    color: rgb(202, 202, 202);
+}
+
+
+
+
+.logo-pattern {
+    z-index: 0;
+    display: flex; flex-direction: row;
+    position: absolute; bottom: 0!important;
+    width: 100vw;
+    gap: 50px;
+}
+
+.logo-pattern .pattern {
+    opacity: 0.1;
+    flex-grow: 1;
+    width: calc(25% - 50px); height: auto;
+    object-fit: cover;
+}
+
+.z-index50 {
+    z-index: 50;
+}
+
+.vh200{
+    bottom: 0;
+}
+
+.only-mobile{
+    display: none!important;
+    bottom: 0;
+}
+
+.only-desktop-pattern{
+    position: fixed!important;
+}
+
+
+.z-index100{
+    z-index: 100;
+}

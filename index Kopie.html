@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>MyMixx</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+          crossorigin="anonymous"  referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/var.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/formular.css">
+    <link rel="stylesheet" href="css/done.css">
+    <link rel="stylesheet" href="css/monitor.css">
+    <link rel="stylesheet" href="css/portrait.css">
+    
+</head>
+<body>
+
+    <header id="header">
+        <nav>
+            <div class="blue"></div>
+
+            <div class="schritt-container">
+                <div class="yellow schritt" id="mixx"> <p>mixx</p></div>
+                <div class="orange schritt" id="bestellen"> <p>bestellen</p></div>
+                <div class="green schritt" id="geniessen"> <p>geniessen</p></div>
+            </div>
+
+            <div id="schritt-mixx" class="hidden schritt-text yellow"><p>Mixx dir deine Lieblingszutaten zusammen!</p></div>
+            <div id="schritt-bestellen" class="hidden schritt-text orange"><p>Bestell und wir machen deinen Mixx fertig!</p></div>
+            <div id="schritt-geniessen" class="hidden schritt-text green"><p> Dann genieße den Geschmack bis zum letzten Löffel!</p></div>
+            
+
+        </nav>
+
+        <div id="logo">
+            <img src="assets/logo.svg" alt="logo MyMixx">
+        </div>
+
+        <div class="overflow-hidden">
+            <div id="video">
+                <video autoplay loop muted playsinline>
+                    <source src="assets/video01.mp4" type="video/mp4" alt="video müsli">
+                </video>
+            </div>
+        </div>
+
+        <div class="logo-pattern vh200 only-desktop only-desktop-pattern">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+        </div>
+
+    </header>
+
+
+    <main id="main" class="">
+        <div class="product">
+            <div class="alarm-add">
+                <p class="alarm-basis hidden">dein Mixx braucht ein Basis</p>
+                <button id="basis-bttn" class="chosen" value="0">die Basis</button>
+            </div>
+            <button id="fruechte-bttn" value="1">Früchte</button>
+            <button id="suess-bttn" value="2">Süßungsmittel</button>
+            <button id="nuesse-bttn" value="3">Nüsse</button>
+            <button id="superfood-bttn" value="4">Superfood</button>
+            <div class="alarm-add">
+                <p class="alarm-fluessigkeit hidden">dein Mixx braucht Flüssigkeit</p>
+                <button id="fluessigkeit-bttn" value="5">Flüssigkeit</button>
+            </div>
+
+        </div>
+
+        <div class="product-list-container swiper" id="basis">
+            <h2 class="erklaerung">Wähle zuerst eine Basis für deinen Mix</h2>
+
+                <div class="slider-wrapper">
+                    <div class="product-list swiper-wrapper"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+
+        </div>
+
+        <div class="product-list-container swiper hidden" id="fruechte">
+            <h2 class="erklaerung">Was wenn wir dein Mixx ein bisschen bunt machen?</h2>
+
+                <div class="slider-wrapper">
+                    <div class="product-list swiper-wrapper"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+
+        </div>
+
+        <div class="product-list-container swiper hidden" id="suess">
+            <h2 class="erklaerung">Mach's süß: Such dir ein natürliches Süßungsmittel für deinen Mix!</h2>
+
+                <div class="slider-wrapper">
+                    <div class="product-list swiper-wrapper"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+
+        </div>
+
+        <div class="product-list-container swiper hidden" id="nuesse">
+            <h2 class="erklaerung">Für den extra Crunch: Wähle deine Lieblingsnüsse!</h2>
+
+                <div class="slider-wrapper">
+                    <div class="product-list swiper-wrapper"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+
+        </div>
+
+        <div class="product-list-container swiper hidden" id="superfood">
+            <h2 class="erklaerung">Boost it! Füge Superfoods für extra Power hinzu!</h2>
+
+                <div class="slider-wrapper">
+                    <div class="product-list swiper-wrapper"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+
+        </div>
+
+        <div class="product-list-container swiper hidden" id="fluessigkeit">
+            <h2 class="erklaerung">Letzter Schritt: Such dir eine Flüssigkeit für cremigen Genuss!</h2>
+
+                <div class="slider-wrapper">
+                    <div class="product-list swiper-wrapper"></div>
+
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+
+        </div>
+
+        <div class="bttn-container z-index50">
+            <button id="weiter">WEITER</button>
+        </div>
+
+        <div class="cart-container z-index50">
+            <button id="cart">MyMixx<i class="fa-solid fa-bag-shopping"></i> </button>
+        </div>
+
+
+        <div class="logo-pattern vh200 only-mobile">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+        </div>
+
+    </main>
+
+
+    <div class="beleg-background hidden">
+        
+        <div class="beleg-container">
+            <div class="img-container">
+                <img src="assets/logo.svg" alt="">
+            </div>
+            <div class="total-container">
+                <div class="beleg-price beleg-price-total">
+                    <p class="titel">Total:</p>
+                    <p class="total-price"></p>
+                </div>
+            </div>
+            <div class="dash-container">
+                <div class="dash"></div>
+            </div>
+
+            <div class="auswahl-container">
+                <div class="beleg-price">
+                    <p class="titel">Basis</p>
+
+                    <div class="price-container price-container1 hidden">
+                        <div class="product-name-price-container">
+                            <p class="basis-name"></p>
+                            <p class="basis-price"></p>
+                            <button class="delete"><i class="fa-regular fa-circle-xmark"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="beleg-price">
+                    <p class="titel">Früchte</p>
+
+                    <div class="price-container price-container2"></div>
+
+                </div>
+
+                <div class="beleg-price">
+                    <p class="titel">Süßungsmittel</p>
+
+                    <div class="price-container price-container3"></div>
+
+                </div>
+
+                <div class="beleg-price">
+                    <p class="titel">Nüsse</p>
+
+                    <div class="price-container price-container4"></div>
+
+                </div>
+
+                <div class="beleg-price">
+                    <p class="titel">Superfood</p>
+
+                    <div class="price-container price-container5"></div>
+
+                </div>
+
+                <div class="beleg-price">
+                    <p class="titel">Flüssigkeit</p>
+
+                    <div class="price-container price-container6 hidden">
+                        <div class="product-name-price-container">
+                            <p class="fluessigkeit-name"></p>
+                            <p class="fluessigkeit-price"></p>
+                            <button class="delete"><i class="fa-regular fa-circle-xmark"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="logo-pattern-green">
+                <img src="assets/logo-green.svg" alt="logo-green">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="formular-background hidden">
+
+
+        <div class="formular-beleg-container only-desktop">
+            <div class="formular-beleg relative z-index50">
+
+
+
+
+                <div class="img">
+                    <img src="assets/logo.svg" alt="">
+                </div>
+
+                <div class="total-container">
+                    <div class="beleg-price-formular total-div">
+                        <p class="titel">Total:</p>
+                        <p class="total-price-formular"></p>
+                    </div>
+                </div>
+                <div class="dash-container">
+                    <div class="dash dash-black"></div>
+                </div>
+
+                <div class="auswahl-container">
+                    <div class="beleg-price-formular">
+                        <p class="titel">Basis</p>
+                        <div class="list display-Basis"></div>
+                    </div>
+    
+                    <div class="beleg-price-formular">
+                        <p class="titel">Früchte</p>
+                        <div class="list display-Fruechte"></div>
+                    </div>
+    
+                    <div class="beleg-price-formular">
+                        <p class="titel">Süßungsmittel</p>
+                        <div class="list display-Suess"></div>
+                    </div>
+    
+                    <div class="beleg-price-formular">
+                        <p class="titel">Nüsse</p>
+                        <div class="list display-Nuesse"></div>
+                    </div>
+    
+                    <div class="beleg-price-formular">
+                        <p class="titel">Superfood</p>
+                        <div class="list display-Superfoods"></div>
+                    </div>
+    
+                    <div class="beleg-price-formular">
+                        <p class="titel">Flüssigkeit</p>
+                        <div class="list display-Fluessigkeit"></div>
+                    </div>
+    
+    
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+        <div class="formular-container z-index50">
+
+            <h1>Deine persönlichen Daten</h1>
+            <form>
+                <div class="label-input relative">
+                    <label for="name-formular">Name</label>
+                    <input type="text" id="name-formular">
+                    <p class="alarm-right alarm-name hidden">Name für die Abholung</p>
+                </div>
+
+
+
+                <div class="label-input relative">
+                    <label for="mail">E-Mail</label>
+                    <input type="email" id="mail">
+                    <p class="alarm-right alarm-email hidden">Gültige E-Mail erforderlich</p>
+                </div>
+
+
+
+                <div class="label-input relative">
+                    <label for="tel">Telefonnummer</label>
+                    <input type="tel" id="tel">
+                    <p class=" alarm-right alarm-tel hidden">Es ist keine Nummer</p>
+                </div>
+
+
+
+                <div class="label-input relative">
+                    <label for="filiale">Wunsch Filiale für Abholung</label>
+                    <select id="select-store">
+                        <option value="" id="option-blanc"></option>
+                        <option value="Berlin Postdam">Berlin Postdam</option>
+                        <option value="Berlin Schönefeld">Berlin Schönefeld</option>
+                        <option value="Düsseldorf Bilk">Düsseldorf Bilk</option>
+                        <option value="Düsseldorf Flingern">Düsseldorf Flingern</option>
+                        <option value="Hamburg WinterHude">Hamburg WinterHude</option>
+                        <option value="Köln Deutz">Köln Deutz</option>
+                    </select>
+                    <p class="alarm-right alarm-store hidden">Wähle das Geschäft aus</p>
+                </div>
+
+
+                <div class="abhol-container">
+                    <div class="label-input relative">
+                        <label for="day">Abholungstag</label>
+                        <input type="date" id="day">
+                        <p class=" alarm-left alarm-day hidden">An diesem Tag geschlossen</p>
+                    </div>
+
+                    <div class="label-input relative">
+                        <label for="hour">Uhrzeit</label>
+                        <input type="time" id="hour">
+                        <p class=" alarm-left alarm-hour hidden">In dieser Uhrzeit geschlossen</p>
+                    </div>
+
+                </div>
+
+
+
+                
+            </form>
+
+        </div>
+
+
+        <button id="back"> <img src="assets/arrow-back.svg" alt="arrow-back">back</button>
+        <button id="bestellen-submit" class="z-index100">BESTELLEN</button>
+
+
+        <div class="logo-pattern vh200 only-desktop">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+        </div>
+
+        <div class="logo-pattern vh200 only-mobile">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+        </div>
+    </div>
+
+
+
+    <div class="done hidden">
+
+        <div class="text-video">
+
+            <div class="text-block-done">
+                <h1>Hey <span class="name-done">Amanda</span>!</h1>
+                <p class="thanks">vielen Dank für deine Bestellung</p>
+                <p> <span class="day-done">Heute </span> um <span class="hour-done">13:45</span> Uhr wartet dein mixx</p>
+                <p>bei <span class="store-done">düsseldorf flingern</span> auf dich</p>
+            </div>
+
+            <div class="overflow-hidden-done z-index50">
+                <div id="video-done">
+                    <video autoplay loop muted playsinline>
+                        <source src="assets/video01.mp4" type="video/mp4" alt="video müsli">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="done-bttn">
+            <button id="startseite" class="z-index50">Startseite</button>
+            <button id="new-mixx" class="z-index50">Neu Mixx</button>
+        </div>
+
+
+
+        <div class="logo-pattern vh200 only-desktop">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+        </div>
+
+        <div class="logo-pattern vh200 only-mobile">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+            <img src="assets/logo.svg" alt="logo" class="pattern">
+        </div>
+    </div>
+
+
+    <script src="script/array.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/product.js"></script>
+
+
+    <script src="script/01basis.js"></script>
+    <script src="script/06fluessigkeit.js"></script>
+
+
+    <script src="script/fase-logic.js"></script>
+    <script src="script/fase.js"></script>
+
+
+    <script src="script/rechner.js"></script>
+    <script src="script/beleg.js"></script>
+    <script src="script/bestellen.js"></script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script/carousel.js"></script>
+
+</body>
+</html>
