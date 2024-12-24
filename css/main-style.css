@@ -85,7 +85,7 @@ header h1 {
     z-index: 50;
 }
 
-div#contentwrap {
+#contentwrap {
     width: 80%;
     max-width: 75rem;
     margin: 60px auto 0;
@@ -93,7 +93,10 @@ div#contentwrap {
     gap: 2rem;
 }
 
-
+#contentwrap p{
+    margin-top: 20px;
+    font-size: 20px;
+}
 
 h2, h1, h3 {
     font-family: "Lilita One", serif;
