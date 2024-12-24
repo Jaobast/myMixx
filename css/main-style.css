@@ -1,29 +1,8 @@
-@font-face {
-    font-family: 'Noto_regu';
-    src: url(../fonts/NotoSans-VariableFont_wdth\,wght.ttf);
-  }
-
-@font-face {
-    font-family: 'Noto_ital';
-    src: url(../fonts/NotoSans-Italic-VariableFont_wdth\,wght.ttf);
-  }
-
-
-:root {
-    --mymixx_1: #f2bb16;
-    --mymixx_2: #d9580d;
-    --mymixx_3: #9abf11;
-    --mymixx_4: #22ddf2;
-    --text_color: darkslategrey;
-  }
-
-
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    text-decoration: none;
-    list-style-type: none;
+    margin: 0; padding: 0;
+    border: none; text-decoration: none;
+    list-style-type: none; box-sizing: border-box;
+    line-height: 1.5;
 }
 
 html {
@@ -32,36 +11,40 @@ html {
 }
 
 body {
-    color: var(--text_color);
+    color: black;
     box-sizing: content-box;
-    font-family: 'Noto_regu', sans-serif;
+    font-family: "Baloo Thambi 2", system-ui;
 }
 
 nav {
-    position: relative;
-    width: 100%;
-    height: 3rem;
-    background-color: var(--mymixx_4);
-}
-
-nav ul {
-    width: 100%;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
+    position: absolute;
+    width: 100%; height: 40px;
+    border-bottom: solid 4px black;
+    background-color: var(--blue);
+    display: flex; flex-direction: row;
     justify-content: center;
 }
 
+nav ul {
+    width: 60%;
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+}
+
 nav ul li {
-    width: 7rem;
-    padding: 0.8rem;
-    margin-right: 1rem;
-    height: 4rem;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    text-align: center;
-    transition: height 0.8s ease;
-    z-index: 1;
+    width: 200px; height: 100px ;
+    font-family: "Lilita One", serif;
+    text-transform: uppercase; text-align: center;
+    border-radius: 0 0 40px 40px;
+    border: solid 4px black; border-top: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center; align-items: center;
+    & a {
+        color: black;
+        font-size: var(--text-M);
+    }
 }
 
 nav ul li:last-of-type {
@@ -69,72 +52,52 @@ nav ul li:last-of-type {
 }
 
 nav ul li:hover {
-    height: 7rem;
+    height: 150px;
+    transition-duration: 1s;
 }
 
-nav ul li.prod {
-    background-color: var(--mymixx_1);
-}
+.blue {background-color: var(--blue);}
+.yellow {background-color: var(--yellow);}
+.orange {background-color: var(--orange);}
+.green {background-color: var(--green);}
 
-nav ul li.uns {
-    background-color: var(--mymixx_2);
-}
-
-nav ul li.stor {
-    background-color: var(--mymixx_3);
-}
-
-nav ul li.nach {
-    background-color: var(--mymixx_4);
-}
-
-nav ul li.kon {
-    background-color: var(--mymixx_1);
-}
-nav ul li.konfigurator {
-    background-color: var(--mymixx_2);
-}
-nav ul a {
-    color: rgb(235, 248, 248);
-    font-weight: 700;
-}
 
 header {
-    min-height: 25rem;
-    background: transparent url('../img/headerbild_mymixx.jpg') no-repeat;
-    background-position:center center;
-    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
 }
 
 header h1 {
     display: none;
 }
 
-header figure {
-    width: 40%;
-    margin-left: 2rem;
-    padding-top: 3rem;
-    z-index: 1000;
+#logo{
+    position: absolute;
+    width: 30%;
+    top: 25vh;
+    left: calc(50% - 20px); transform: translateX(-50%);
 }
 
-header figure img {
-    width: 100%;
+#cover{
+    display: flex;
+    justify-content: center; align-items: center;
+    width: 100%; height: 100%;
+    z-index: 50;
 }
 
 div#contentwrap {
     width: 80%;
     max-width: 75rem;
-    margin: 150px auto;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    margin: 60px auto 0;
+    display: flex; flex-direction: column;
     gap: 2rem;
 }
 
 
 
-main h2, aside h2 {
-    margin-top: 1rem;
-    margin-bottom: 0.8rem;
+h2, h1, h3 {
+    font-family: "Lilita One", serif;
+    text-transform: uppercase;
 }
 
 main p, aside p {
@@ -150,21 +113,27 @@ main p.claim {
 }
 
 aside {
+    margin-top: 100px;
     width: 100%;
 }
 
 aside figure {
-    width: 100%;
+    width: 30%;
 }
 
 aside figure img {
     width: 100%;
+    border-radius: 24px;
+    border: 4px solid black;
+    float: left; margin-right: 50px;
 }
 
 footer {
-    min-height: 10rem;
-    background-color: var(--mymixx_3);
+    height: fit-content;
+    background-color: var(--green);
     margin-top: 2rem;
+    overflow: hidden;
+    padding-bottom: 50px;
 }
 
 #footwrap {
@@ -172,32 +141,32 @@ footer {
     max-width: 75rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 footer section {
     margin-top: 2rem;
+    height: fit-content;
 }
+
+.ul-row{
+    display: flex; flex-direction: row;
+    gap: 20px;
+}
+
 footer section ul li a {
-    color: var(--text_color);
+    color: black;
     font-size: 0.8rem;
 }
 
 footer section#siegel ul, footer section#socmed ul  {
-    display: grid;
-    grid-template-columns: 2rem 2rem 2rem;
-    grid-template-rows: 2rem 2rem 2rem;
-    gap: 2rem;
-}
-
-footer section ul li a img:hover {
-    cursor: grab;
+    margin-top: 20px;
+    display: flex; flex-direction: row;
+    height: 50px; gap: 10px;
 }
 
 footer section ul li a img {
-    width: 300%;
-    padding-top: 1rem;
+    height: 100%;
 }
 .konfigbtn {
     width: 200px;
@@ -218,3 +187,12 @@ footer section ul li a img {
     100% { transform: rotate(0deg) translateX(0) scale(1.05); }
 }
 
+
+.footer-border-radius{
+    width: calc(100% + 8px); height: 50px;
+    margin-left: -4px;
+    background-color: white;
+    border-radius: 0 0 100px 100px;
+    border: 4px black solid;
+    border-top: none;
+}
